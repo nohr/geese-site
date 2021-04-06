@@ -1,0 +1,8 @@
+body,
+html {
+  background-image: url("/img/art.jpg");
+  background-color: #000000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

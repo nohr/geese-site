@@ -1,0 +1,215 @@
+@import url("https://p.typekit.net/p.css?s=1&k=qbw2bro&ht=tk&f=12560.12561.12562.12563&a=55228952&app=typekit&e=css");
+@font-face {
+  font-family: "vag-rundschrift-d";
+  src: url("https://use.typekit.net/af/7be1d2/000000000000000077359f08/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/7be1d2/000000000000000077359f08/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/7be1d2/000000000000000077359f08/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "vag-rundschrift-d";
+  src: url("https://use.typekit.net/af/928ec3/000000000000000077359f0e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/928ec3/000000000000000077359f0e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/928ec3/000000000000000077359f0e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "vag-rundschrift-d";
+  src: url("https://use.typekit.net/af/071449/000000000000000077359f0d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"), url("https://use.typekit.net/af/071449/000000000000000077359f0d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"), url("https://use.typekit.net/af/071449/000000000000000077359f0d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "vag-rundschrift-d";
+  src: url("https://use.typekit.net/af/1073af/000000000000000077359f13/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/1073af/000000000000000077359f13/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/1073af/000000000000000077359f13/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+}
+
+body,
+html {
+  font-family: "vag-rundschrift-d", sans-serif;
+  font-weight: 300;
+  font-style: light;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+body a,
+html a {
+  color: #fff;
+}
+
+.drop-wrapper {
+  margin: auto 0 0 0;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(49%, rgba(0, 0, 0, 0.746394)), color-stop(59%, rgba(0, 0, 0, 0.679167)), color-stop(72%, rgba(0, 0, 0, 0.527906)), color-stop(77%, rgba(0, 0, 0, 0.449475)), color-stop(86%, rgba(0, 0, 0, 0.244993)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.746394) 49%, rgba(0, 0, 0, 0.679167) 59%, rgba(0, 0, 0, 0.527906) 72%, rgba(0, 0, 0, 0.449475) 77%, rgba(0, 0, 0, 0.244993) 86%, rgba(255, 255, 255, 0) 100%);
+  -ms-grid-rows: 47% 10% auto;
+      grid-template-rows: 47% 10% auto;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+.logo {
+  height: 73px;
+  cursor: pointer;
+}
+
+#logo1 {
+  margin-bottom: 10px;
+}
+
+#logoMenu {
+  margin: auto;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#logoClosed {
+  height: 73px;
+  display: block;
+  position: fixed;
+  z-index: inherit;
+  bottom: 0;
+  margin: 0 auto 10px auto;
+  -ms-grid-rows: 47% 10% auto;
+      grid-template-rows: 47% 10% auto;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.drop-menu {
+  text-align: left;
+  font-size: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 3;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+ul {
+  padding-left: 0px;
+  -webkit-margin-before: 35px;
+          margin-block-start: 35px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.drop-menu a {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.drop-menu a {
+  display: block;
+  text-decoration: none;
+}
+
+#m0 {
+  letter-spacing: 10px;
+  text-indent: 10px;
+}
+
+#m1 {
+  letter-spacing: 10px;
+  text-indent: 10px;
+}
+
+#m2 {
+  letter-spacing: 10px;
+  text-indent: 10px;
+}
+
+#m3 {
+  letter-spacing: 10px;
+  text-indent: 10px;
+}
+
+#m4 {
+  letter-spacing: 10px;
+  text-indent: 10px;
+}
+
+#m5 {
+  letter-spacing: 10px;
+  text-indent: 10px;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 30px 0 30px 0;
+}
+
+a#Layer_1 {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+svg#Layer_1 {
+  width: 17px;
+  height: 17px;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5,
+.row-6 {
+  min-height: 5px;
+  padding: 0 auto;
+}
+/*# sourceMappingURL=main.css.map */

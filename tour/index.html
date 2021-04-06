@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Google Tag Manager 
+         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+             })(window,document,'script','dataLayer','GTM-N2LKN6X');</script>
+             <!-- End Google Tag Manager -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Tour | GEESE</title>
+      <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">-->
+      <link href="/css/main.css" rel="stylesheet" type="text/css">
+      <link href="tour.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://use.typekit.net/qbw2bro.css">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col">
+               <!--Nav --> 
+               <div id="navWrap">
+               <div id="logoClosed">
+                   <img id="logo1" class="logo" src="/img/IMG_0065.PNG" onclick="butClick();" alt="">
+               </div>
+               <div class="drop-wrapper" style="display: none; opacity: 0; transition: all 1s ease 0s;">
+                   <div id="logoMenu">
+                    <img id="logo2" class="logo" src="/img/IMG_0065.PNG" onclick="butClick();" alt="">
+                   </div>
+                
+                  <div class="drop-menu dropup" id="dropup" style="transform: translateY(0%);">
+                     <ul>
+                        <il>
+                            <a id="m0" href="/">HOME</a><br>
+                         </il>
+                         <il>
+                            <a id="m1" href="/music/index.html">MUSIC</a><br>
+                         </il>
+                        <il>
+                           <a id="m2" href="#">SHOP</a><br>
+                        </il>
+                        <il>
+                           <a id="m4" href="#">SIGNUP</a><br>
+                        </il>
+                        <il>
+                           <a id="m5" href="/contact/index.html">CONTACT</a><br>
+                        </il>
+                        <il class="socials">
+                            <div class="row-1">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 491"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M512,194.8c0,101.3-82.4,183.8-183.8,183.8-101.7,0-184.4-82.4-184.4-183.8,0-101.6,82.7-184.3,184.4-184.3C429.6,10.5,512,93.2,512,194.8ZM0,501.5H90V10.5H0Z" transform="translate(0 -10.5)"/></svg>
+                            </div>
+                            <div class="row-2">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 415.84"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M459.37,151.72c.33,4.54.33,9.09.33,13.64,0,138.72-105.59,298.56-298.56,298.56A296.51,296.51,0,0,1,0,416.81a215.83,215.83,0,0,0,25.34,1.3,210.15,210.15,0,0,0,130.27-44.83A105.12,105.12,0,0,1,57.5,300.51a132.94,132.94,0,0,0,19.82,1.62,111.09,111.09,0,0,0,27.61-3.57,105,105,0,0,1-84.14-103v-1.29a105.67,105.67,0,0,0,47.43,13.31A105.07,105.07,0,0,1,35.74,67.25,298.28,298.28,0,0,0,252.1,177.06a118.78,118.78,0,0,1-2.6-24,105,105,0,0,1,181.6-71.8,206.58,206.58,0,0,0,66.6-25.34,104.61,104.61,0,0,1-46.13,57.83A210.61,210.61,0,0,0,512,97.46a225.62,225.62,0,0,1-52.63,54.26Z" transform="translate(0 -48.08)"/></svg>
+                            </div>
+                            <div class="row-3">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.25 448.15"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M224.1,141A114.9,114.9,0,1,0,339,255.9,114.72,114.72,0,0,0,224.1,141Zm0,189.6a74.7,74.7,0,1,1,74.7-74.7,74.84,74.84,0,0,1-74.7,74.7ZM370.5,136.3a26.8,26.8,0,1,1-26.8-26.8A26.74,26.74,0,0,1,370.5,136.3Zm76.1,27.2c-1.7-35.9-9.9-67.7-36.2-93.9s-58-34.4-93.9-36.2c-37-2.1-147.9-2.1-184.9,0C95.8,35.1,64,43.3,37.7,69.5s-34.4,58-36.2,93.9c-2.1,37-2.1,147.9,0,184.9,1.7,35.9,9.9,67.7,36.2,93.9s58,34.4,93.9,36.2c37,2.1,147.9,2.1,184.9,0,35.9-1.7,67.7-9.9,93.9-36.2s34.4-58,36.2-93.9c2.1-37,2.1-147.8,0-184.8ZM398.8,388a75.63,75.63,0,0,1-42.6,42.6c-29.5,11.7-99.5,9-132.1,9s-102.7,2.6-132.1-9A75.63,75.63,0,0,1,49.4,388c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7,9-132.1A75.63,75.63,0,0,1,92,81.2c29.5-11.7,99.5-9,132.1-9s102.7-2.6,132.1,9a75.63,75.63,0,0,1,42.6,42.6c11.7,29.5,9,99.5,9,132.1S410.5,358.6,398.8,388Z" transform="translate(0.07 -31.82)"/></svg>
+                            </div>
+                            <div class="row-4">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M297.22,243.2c0,15.62-11.52,28.42-26.12,28.42-14.33,0-26.11-12.8-26.11-28.42s11.52-28.42,26.11-28.42S297.22,227.58,297.22,243.2ZM177.66,214.78c-14.59,0-26.11,12.8-26.11,28.42s11.78,28.42,26.11,28.42c14.6,0,26.12-12.8,26.12-28.42C204,227.58,192.26,214.78,177.66,214.78ZM448,52.74V512c-64.49-57-43.87-38.13-118.78-107.78l13.56,47.36H52.48A52.6,52.6,0,0,1,0,398.85V52.74A52.61,52.61,0,0,1,52.48,0h343A52.61,52.61,0,0,1,448,52.74ZM375,295.42c0-82.43-36.86-149.24-36.86-149.24-36.87-27.65-71.94-26.88-71.94-26.88l-3.58,4.09c43.52,13.31,63.74,32.51,63.74,32.51-60.81-33.32-132.24-33.33-191.23-7.42-9.47,4.35-15.11,7.42-15.11,7.42s21.25-20.22,67.33-33.53l-2.56-3.07s-35.07-.77-71.93,26.88c0,0-36.87,66.81-36.87,149.24,0,0,21.51,37.12,78.08,38.92,0,0,9.47-11.52,17.15-21.25-32.51-9.73-44.8-30.21-44.8-30.21,3.77,2.64,10,6.05,10.5,6.4,43.21,24.2,104.59,32.13,159.74,9a146.51,146.51,0,0,0,29.44-15.1s-12.8,21-46.33,30.46c7.68,9.73,16.89,20.74,16.89,20.74,56.58-1.8,78.34-38.92,78.34-38.92Z"/></svg>
+                            </div>
+                            <div class="row-5">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 546.13 384"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M549.66,124.08a68.63,68.63,0,0,0-48.29-48.59C458.78,64,288,64,288,64S117.22,64,74.63,75.49a68.63,68.63,0,0,0-48.29,48.59C14.93,167,14.93,256.39,14.93,256.39s0,89.44,11.41,132.3c6.29,23.65,24.79,41.5,48.29,47.82C117.22,448,288,448,288,448s170.78,0,213.37-11.49c23.5-6.32,42-24.17,48.29-47.82,11.41-42.86,11.41-132.3,11.41-132.3S561.07,167,549.66,124.08ZM232.15,337.59V175.18l142.73,81.21-142.73,81.2Z" transform="translate(-14.93 -64)"/></svg>
+                            </div>
+                            <div class="row-6">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M248,8C111.1,8,0,119.1,0,256S111.1,504,248,504,496,392.9,496,256,384.9,8,248,8ZM348.7,372.9c-4.2,0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9,1-9,2.6-11.9,2.6a15.57,15.57,0,0,1-15.8-15.8c0-10.3,6.1-15.2,13.6-16.8,81.9-18.1,165.6-16.5,237,26.2,6.1,3.9,9.7,7.4,9.7,16.5a15.11,15.11,0,0,1-15.2,15.4Zm26.9-65.6c-5.2,0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8,1.3-7.4,2.6-11.9,2.6a19.42,19.42,0,0,1-19.4-19.4c0-10.7,5.2-17.8,15.5-20.7,27.8-7.8,56.2-13.6,97.8-13.6,64.9,0,127.6,16.1,177,45.5,8.1,4.8,11.3,11,11.3,19.7A19.38,19.38,0,0,1,375.6,307.3Zm31-76.2c-5.2,0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6,1-8.1,2.6-12.9,2.6-13.2,0-23.3-10.3-23.3-23.6,0-13.6,8.4-21.3,17.4-23.9,35.2-10.3,74.6-15.2,117.5-15.2,73,0,149.5,15.2,205.4,47.8,7.8,4.5,12.9,10.7,12.9,22.6a23.17,23.17,0,0,1-23.2,23.3Z" transform="translate(0 -8)"/></svg>
+                            </div>
+                            <div class="row-7">
+                                <a href="https://geese.bandcamp.com/"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm48.2,326.1h-181L207.9,178h181Z" transform="translate(-8 -8)"/></svg></a>
+                            </div>
+                        </il>
+                     </ul>
+                  </div>
+                </div>
+            </div>
+            </div>
+         </div>
+      </div>
+      <script src="/js/anime-master/lib/anime.min.js"></script>
+      <script src="/js/script.js"></script>
+      <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>-->
+      <!-- Google Tag Manager (noscript) 
+         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2LKN6X"
+         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+         <!-- End Google Tag Manager (noscript) -->
+   </body>
+</html>
