@@ -1,9 +1,8 @@
 body,
 html {
-  background-image: url(../img/art.jpg) no-repeat center center fixed;
+  background-image: url("../img/art.jpg");
   background-color: #000000;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
