@@ -1,6 +1,74 @@
 body,
 html {
-  background-color: #05a500;
+  background-color: #000000;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+  color: #ffffff;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: .4fr 1.4fr 1.2fr;
+  height: 100%;
+  width: 100%;
+}
+
+.bit-widget-container{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+
+}
+
+.bit-location{
+  font-weight: 100!important;
+}
+
+.bit-event-buttons{
+  padding: 0 12px !important;
+  font-size: 11px !important;
+  min-width: 150px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.bit-details{
+  margin-left: 20px;
+}
+
+.blankDiv{
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+p#text{
+  text-align: center;
+}
+
+#id01{
+  display: inline-flex;
+
+}
+
+.tourSignup{
+    justify-content: center;
+}
+
+.signup{
+  background-color: #ffffff;
+  color: #000000;
+  border: #ffffff 1px solid;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
 }
