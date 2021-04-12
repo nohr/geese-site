@@ -1,6 +1,29 @@
 body,
 html {
-  background-color: #ff7a7a;
+  background-color: #000000;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
+
+.container{
+  margin-top: 0px;
+  height: 100%;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.text{
+  display: grid;
+  margin: 20px;
+  text-align: center;
+}
+
+p {
+  color: #ffffff;
+}
+
+.title{
+  font-weight: 700;
+}
+

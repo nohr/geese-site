@@ -6,69 +6,109 @@ html {
   color: #ffffff;
 }
 
-.container{
+.container {
   display: grid;
-  grid-template-rows: .4fr 1.4fr 1.2fr;
+  grid-template-rows: 0.4fr 1.4fr 1.2fr;
   height: 100%;
   width: 100%;
 }
 
-.bit-widget-container{
+.bit-widget-container {
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 2;
   grid-row-end: 2;
-
+  overflow-y: scroll;
 }
 
-.bit-location{
-  font-weight: 100!important;
+.bit-location {
+  font-weight: 100 !important;
 }
 
-.bit-event-buttons{
+.bit-event-buttons {
   padding: 0 12px !important;
   font-size: 11px !important;
   min-width: 150px;
-    text-align: right;
-    white-space: nowrap;
+  text-align: right;
+  white-space: nowrap;
 }
 
-.bit-details{
+.bit-widget.bit-layout-ipad .bit-event-list-title{
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: x-large;
+}
+
+.bit-details {
   margin-left: 20px;
 }
 
-.blankDiv{
+.bit-event-buttons {
+  min-width: max-content;
+}
+
+.bit-widget.bit-layout-ipad .bit-event .bit-button {
+  width: 80px !important;
+}
+
+.blankDiv {
   grid-row-start: 1;
   grid-row-end: 1;
 }
 
-p#text{
+p#text {
   text-align: center;
 }
 
-#id01{
-  display: inline-flex;
-
-}
-
-.tourSignup{
-    justify-content: center;
-}
-
-.signup{
-  background-color: #ffffff;
-  color: #000000;
-  border: #ffffff 1px solid;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
+.tourSignup {
+  justify-self: center;
+  font-size: smaller;
+  width: max-content;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 3;
+  grid-row-end: 3;
   width: 100%;
-  opacity: 0.9;
+}
+
+#id01 {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: min-content;
+}
+button{
+  background-color: #dd0000;
+  font-size: 0.88em !important;
+}
+
+input{
+  width: 55vw;
+  border-style: solid;
+  border: black;
+  border-radius: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+.signup {
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 768px) {
+  input{
+    width: 25vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  input{
+    width: 55vw;
+  }  
 }

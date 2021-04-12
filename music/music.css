@@ -6,8 +6,9 @@ html {
 }
 
 .container{
+  height: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr auto;
+  grid-template-rows: 20% 70% auto;
 }
 
 #album{

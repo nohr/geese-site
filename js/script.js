@@ -10,77 +10,155 @@ let menuPos = (intViewportHeight + (menuHeight.top/2));
 let margin = window.getComputedStyle(logo2);
 let i = parseFloat(margin.marginBottom);
 let logoPos = (intViewportHeight - (logoHeight.bottom + i));
+const mediaQuery = window.matchMedia('(min-width: 768px)')
 
-
-//sets the starting logo position
 window.onload = (event) => {
     anime({
         targets: menu,
         easing: 'easeInOutExpo',
-        translateY: menuPos
+        translateY: "100vh"
     }); 
     anime({
         targets: logo2,
         easing: 'easeInOutExpo',
-        translateY: logoPos
+        translateY: "100vh"
     });
 };
 
-
-console.log(typeof margin.marginBottom);
-
-
-
-
 //toggles the nav menu
 function butClick() {
-    if (open) {
-        anime({
-            targets: menu,
-            easing: 'easeInOutExpo',
-            translateY: menuPos,
-            delay: 0,
-            duration: 300
-        }); 
-        anime({
-            targets: logo2,
-            easing: 'easeInOutExpo',
-            translateY: logoPos,
-            duration: 300
-        });
-                wrap.style.opacity = "0%";
-            
-            wrap.style.transition = "1s"
-        logo1.style.display = "block";
-        setTimeout(() => {
-            wrap.style.display = "none";
-            
-          }, 300);
-        console.log(open);
-        open = false;
-    } else if (!open) {
-        anime({
-            targets: menu,
-            easing: 'cubicBezier(0.075, 0.820, 0.165, 1.000)',
-            translateY: "0%",
-            delay: 0,
-            duration: 300
-        });
-        anime({
-            targets: logo2,
-            easing: 'cubicBezier(0.075, 0.820, 0.165, 1.000)',
-            translateY: 0,
-            duration: 300
-        });
-        wrap.style.display = "grid";
-        wrap.style.opacity = "100%";
-        wrap.style.transition = "2s";
-        logo1.style.display = "none";
-        setTimeout(() => {
-            
-          }, 1000);
-        console.log(open);console.log(i);
-        open = true;
-    }
+    function handleTabletChange(e) {
+        // Check if the media query is true
+        if (e.matches) { // Not Mobile
+            if (open) {
+                anime({
+                    targets: menu,
+                    easing: 'easeInOutExpo',
+                    translateY: menuPos,
+                    delay: 0,
+                    duration: 300
+                }); 
+                anime({
+                    targets: logo2,
+                    easing: 'easeInOutExpo',
+                    translateY: logoPos,
+                    duration: 300
+                });
+                        wrap.style.opacity = "0%";
+                    
+                    wrap.style.transition = "1s";
+                logo1.style.display = "block";
+                setTimeout(() => {
+                    wrap.style.display = "none";
+                    
+                  }, 300);
+                console.log(open);
+                open = false;
+            } else if (!open) {
+                anime({
+                    targets: menu,
+                    easing: 'cubicBezier(0.075, 0.820, 0.165, 1.000)',
+                    translateY: "0vh",
+                    delay: 0,
+                    duration: 300
+                });
+                anime({
+                    targets: logo2,
+                    easing: 'cubicBezier(0.075, 0.820, 0.165, 1.000)',
+                    translateY: '50vh',
+                    duration: 300
+                });
+                wrap.style.display = "grid";
+                wrap.style.opacity = "100%";
+                wrap.style.transition = "2s";
+                logo1.style.display = "none";
+                setTimeout(() => {
+                    
+                  }, 1000);
+                open = true;
+            }
+        } else { // Mobile
+            if (open) {
+                anime({
+                    targets: menu,
+                    easing: 'easeInOutExpo',
+                    translateY: menuPos,
+                    delay: 0,
+                    duration: 300
+                }); 
+                anime({
+                    targets: logo2,
+                    easing: 'easeInOutExpo',
+                    translateY: logoPos,
+                    duration: 300
+                });
+                        wrap.style.opacity = "0%";
+                    
+                    wrap.style.transition = "1s";
+                logo1.style.display = "block";
+                setTimeout(() => {
+                    wrap.style.display = "none";
+                    
+                  }, 300);
+                open = false;
+            } else if (!open) {
+                anime({
+                    targets: menu,
+                    easing: 'cubicBezier(0.075, 0.820, 0.165, 1.000)',
+                    translateY: "0%",
+                    delay: 0,
+                    duration: 300
+                });
+                anime({
+                    targets: logo2,
+                    easing: 'cubicBezier(0.075, 0.820, 0.165, 1.000)',
+                    translateY: 0,
+                    duration: 300
+                });
+                wrap.style.display = "grid";
+                wrap.style.opacity = "100%";
+                wrap.style.transition = "2s";
+                logo1.style.display = "none";
+                setTimeout(() => {
+                    
+                  }, 1000);
+                open = true;
+            }
+        }
+      }
+// Register event listener
+mediaQuery.addListener(handleTabletChange)
+
+// Initial check
+handleTabletChange(mediaQuery)
 
 }
+
+
+
+
+// Get the modal
+var modal = document.getElementsByClassName("modal")[0];
+
+// Get the button that opens the modal
+var btn = document.getElementById("m4");
+
+// Get the <span> element that closes the modal
+var span = document.getElementById("close");
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
