@@ -64,9 +64,17 @@ html {
   touch-action: manipulation;
   a {
     color: #fff;
+    text-decoration: none;
+  }
+  p{
+    color: #ffffff;
   }
 }
 
+ul{
+  padding-left: 30px;
+  list-style-type: none;
+}
 h1{
   color: #ffffff;
   text-align: center;
@@ -85,32 +93,6 @@ button {
   opacity: 0.9;
 }
 
-#m0 {
-  letter-spacing: 10px;
-  text-indent: 10px;
-}
-
-#m1 {
-  letter-spacing: 10px;
-  text-indent: 10px;
-}
-#m2 {
-  letter-spacing: 10px;
-  text-indent: 10px;
-}
-#m3 {
-  letter-spacing: 10px;
-  text-indent: 10px;
-}
-#m4 {
-  letter-spacing: 10px;
-  text-indent: 10px;
-}
-#m5 {
-  letter-spacing: 10px;
-  text-indent: 10px;
-}
-
 a#icon {
   display: inline-block;
   height: 100%;
@@ -119,15 +101,6 @@ a#icon {
 svg#icon {
   width: 17px;
   height: 17px;
-}
-.row-1,
-.row-2,
-.row-3,
-.row-4,
-.row-5,
-.row-6 {
-  min-height: 5px;
-  padding: 0 auto;
 }
 
 .modal {
@@ -173,6 +146,7 @@ p#text {
   text-align: center;
 }
 
+/*NOT MOBILE*/
 @media only screen and (min-width: 768px) {
   svg#close{
     position: absolute;
@@ -197,7 +171,7 @@ p#text {
     grid-row-end: 2;
     position: fixed;
     z-index: inherit;
-    left: 10px;
+    left: 15px;
   }
   
   #logoClosed {
@@ -206,7 +180,7 @@ p#text {
     position: fixed;
     z-index: inherit;
     bottom: 0;
-    left: 10px;
+    left: 15px;
     margin: 0 auto 10px auto;
     grid-template-rows: 47% 10% auto;
     grid-column-start: 1;
@@ -241,7 +215,7 @@ p#text {
       rgba(0, 0, 0, 0.2449930655856093) 86%,
       rgba(255, 255, 255, 0) 100%
     );
-    grid-template-rows: 47% 10% auto;
+    grid-template-rows: 10% 10% auto;
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
@@ -250,11 +224,8 @@ p#text {
   }
   
   .drop-menu {
-    // width: 100%;
     text-align: left;
     font-size: 20px;
-    //position: sticky;
-    //display: none;
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 3;
@@ -262,23 +233,18 @@ p#text {
     align-self: end;
   }
   ul {
-    padding-left: 0px;
     margin-block-start: 35px;
     margin-block-end: 0px;
+    margin-bottom: 20px;
   }
   il {
     margin: 0;
     padding: 0;
-    height: 30px;
   }
   
   .drop-menu a {
-    padding-left: 30px;
-  }
-  .drop-menu a {
     display: block;
-    //padding: 0.5rem 0.5rem;
-    text-decoration: none;
+    
   }
 
   input{
@@ -290,10 +256,94 @@ p#text {
   .socials {
     display: inline-flex;
     justify-content: space-around;
-    margin: 30px 0 30px 0;
+    margin: 30px 0 10px 0;
   }
+  #signUp{
+    display: none;
+  }
+  p#text {
+    text-align:left;
+  }
+
+  li .signUp {
+    color: white;
+    justify-self: center;
+    font-size: smaller;
+  }
+  
+  #id01 {
+    display: flex;
+    width: min-content;
+  }
+
+  div#id01 input{
+    width: 240px;
+  }
+  button{
+    background-color: #dd0000;
+    font-size: 0.88em !important;
+  }
+  
+  input{
+    width: 25vw;
+    border-style: solid;
+    border: black;
+    border-radius: 0;
+  }
+  
+  input[type="search"] {
+    -webkit-appearance: none;
+  }
+  
+  .signup {
+    text-transform: uppercase;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+  
+#m0 {
+  letter-spacing: 10px;
+  width: min-content;
+}
+#m1 {
+  letter-spacing: 10px;
+  width: min-content;
+}
+#m2 {
+  letter-spacing: 10px;
+  width: min-content;
+}
+#m3 {
+  letter-spacing: 10px;
+  width: min-content;
+}
+#m4 {
+  letter-spacing: 10px;
+  width: min-content;
+}
+#m5 {
+  letter-spacing: 10px;
+  width: min-content;
+}
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5,
+.row-6,
+.row-7,
+.row-8 {
+  min-height: 5px;
+  padding: 0 auto;
+  margin-right: 30px;
+}
+a.nabla{
+  font-size: 10px !important;
+  width: fit-content;
 }
 
+}
+/*MOBILE*/
 @media only screen and (max-width: 768px) {
 
   .logo {
@@ -321,7 +371,7 @@ p#text {
     z-index: inherit;
     bottom: 0;
     margin: 0 auto 10px auto;
-    grid-template-rows: 47% 10% auto;
+    grid-template-rows: 10% 10% auto;
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
@@ -333,7 +383,6 @@ p#text {
 .drop-wrapper{
   font-family: "vag-rundschrift-d", sans-serif;
   font-weight: 300;
-  font-style: light;
 }
 
 .drop-wrapper {
@@ -389,12 +438,8 @@ il {
 
 .drop-menu a {
   text-align: center;
-  padding: 5px 0;
-}
-.drop-menu a {
+  padding: 5px 0;  
   display: block;
-  //padding: 0.5rem 0.5rem;
-  text-decoration: none;
 }
 
 svg#close{
@@ -408,7 +453,7 @@ svg#close{
 .socials {
   display: flex;
   justify-content: space-around;
-  margin: 30px 0 30px 0;
+  margin: 0;
 }
 
 input{
@@ -427,5 +472,43 @@ input[type="search"] {
   color: #ffffff;
   white-space: nowrap;
 }
+.signUpItem{
+  display: none;
+}
 
+
+#m0 {
+  letter-spacing: 10px;
+}
+#m1 {
+  letter-spacing: 10px;
+}
+#m2 {
+  letter-spacing: 10px;
+}
+#m3 {
+  letter-spacing: 10px;
+}
+#m4 {
+  letter-spacing: 10px;
+}
+#m5 {
+  letter-spacing: 10px;
+}
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5,
+.row-6,
+.row-7,
+.row-8 {
+  min-height: 5px;
+  padding: 0 auto;
+}
+a.nabla{
+  font-size: 10px !important;
+  margin-left: 10px;
+  width: fit-content;
+}
 }
