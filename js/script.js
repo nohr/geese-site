@@ -52,7 +52,6 @@ function butClick() {
                     wrap.style.display = "none";
                     
                   }, 300);
-                console.log(open);
                 open = false;
             } else if (!open) {
                 anime({
@@ -72,9 +71,6 @@ function butClick() {
                 wrap.style.opacity = "100%";
                 wrap.style.transition = "2s";
                 logo1.style.display = "none";
-                setTimeout(() => {
-                    
-                  }, 1000);
                 open = true;
             }
         } else { // Mobile
@@ -119,9 +115,6 @@ function butClick() {
                 wrap.style.opacity = "100%";
                 wrap.style.transition = "2s";
                 logo1.style.display = "none";
-                setTimeout(() => {
-                    
-                  }, 1000);
                 open = true;
             }
         }
