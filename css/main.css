@@ -189,8 +189,6 @@ p#text {
     bottom: 0;
     left: 15px;
     margin: 0 auto 10px auto;
-    -ms-grid-rows: 47% 10% auto;
-        grid-template-rows: 47% 10% auto;
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 1;
@@ -214,8 +212,8 @@ p#text {
     background: black;
     background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(49%, rgba(0, 0, 0, 0.746394)), color-stop(59%, rgba(0, 0, 0, 0.679167)), color-stop(72%, rgba(0, 0, 0, 0.527906)), color-stop(77%, rgba(0, 0, 0, 0.449475)), color-stop(86%, rgba(0, 0, 0, 0.244993)), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.746394) 49%, rgba(0, 0, 0, 0.679167) 59%, rgba(0, 0, 0, 0.527906) 72%, rgba(0, 0, 0, 0.449475) 77%, rgba(0, 0, 0, 0.244993) 86%, rgba(255, 255, 255, 0) 100%);
-    -ms-grid-rows: 10% 10% auto;
-        grid-template-rows: 10% 10% auto;
+    -ms-grid-rows: 10% auto auto;
+        grid-template-rows: 10% auto auto;
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 1;
