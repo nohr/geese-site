@@ -50,7 +50,6 @@ window.onload = (event) => {
     anime({
         targets: logo2,
         easing: 'easeInOutExpo',
-        translateY: "100vh",
         duration: 1
     });
 };
@@ -68,12 +67,6 @@ function butClick() {
                     delay: 0,
                     duration: 300
                 }); 
-                anime({
-                    targets: logo2,
-                    easing: 'easeInOutExpo',
-                    translateY: logoPos,
-                    duration: 300
-                });
                         wrap.style.opacity = "0%";
                     
                     wrap.style.transition = "1s";
@@ -89,12 +82,6 @@ function butClick() {
                     easing: 'cubicBezier(0.075, 0.820, 0.165, 1.000)',
                     translateY: "0vh",
                     delay: 0,
-                    duration: 300
-                });
-                anime({
-                    targets: logo2,
-                    easing: 'cubicBezier(0.075, 0.820, 0.165, 1.000)',
-                    translateY: '42vh',
                     duration: 300
                 });
                 wrap.style.display = "grid";

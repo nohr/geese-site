@@ -79,6 +79,11 @@ button {
   opacity: 0.9;
 }
 
+.logo {
+  height: 73px;
+  cursor: pointer;
+}
+
 a#icon {
   display: inline-block;
   height: 100%;
@@ -164,10 +169,6 @@ p#text {
     width: 12px;
     height: 12px;
   }
-  .logo {
-    height: 73px;
-    cursor: pointer;
-  }
   #logo1 {
     margin-bottom: 10px;
   }
@@ -178,9 +179,7 @@ p#text {
     -ms-grid-row: 2;
         grid-row-start: 2;
     grid-row-end: 2;
-    position: fixed;
-    z-index: inherit;
-    left: 15px;
+    margin-left: 15px;
   }
   #logoClosed {
     height: 73px;
@@ -367,10 +366,6 @@ p#text {
 
 /*MOBILE*/
 @media only screen and (max-width: 768px) {
-  .logo {
-    height: 73px;
-    cursor: pointer;
-  }
   #logo1 {
     margin-bottom: 10px;
   }
@@ -382,9 +377,12 @@ p#text {
     -ms-grid-row: 2;
         grid-row-start: 2;
     grid-row-end: 2;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #logoClosed {
     height: 73px;
