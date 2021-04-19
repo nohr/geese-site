@@ -37,7 +37,7 @@
 
 body,
 html {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -135,29 +135,61 @@ svg#icon {
   padding-bottom: 15px;
 }
 
+table {
+  border-spacing: 0px;
+}
+
 button {
   background-color: #dd0000;
   font-size: 0.88em !important;
 }
 
-input::-webkit-input-placeholder {
+input#MERGE0.field {
+  border-style: solid;
+  border: black;
+  border-radius: 0;
+}
+
+input#MERGE0.field::-webkit-input-placeholder {
   font-style: italic;
 }
 
-input:-ms-input-placeholder {
+input#MERGE0.field:-ms-input-placeholder {
   font-style: italic;
 }
 
-input::-ms-input-placeholder {
+input#MERGE0.field::-ms-input-placeholder {
   font-style: italic;
 }
 
-input::placeholder {
+input#MERGE0.field::placeholder {
   font-style: italic;
 }
 
-p#text {
-  text-align: center;
+input.button {
+  background-color: #dd0000;
+  color: #ffffff;
+  font-size: 0.88em !important;
+  border-width: 0px;
+  border-color: black;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 15px;
+  margin: 0;
+}
+
+td {
+  padding: 0;
+}
+
+tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.signUp p {
+  line-height: 24px;
 }
 
 /*NOT MOBILE*/
@@ -180,6 +212,7 @@ p#text {
         grid-row-start: 2;
     grid-row-end: 2;
     margin-left: 15px;
+    top: -73px;
   }
   #logoClosed {
     height: 73px;
@@ -251,52 +284,19 @@ p#text {
   .drop-menu a {
     display: block;
   }
-  input {
+  /* SignUp */
+  input#MERGE0.field {
     width: 25vw;
-    border-style: solid;
-    border: black;
-    border-radius: 0;
-  }
-  .socials {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin: 30px 0 10px 0;
+    height: 44px;
   }
   #signUp {
     display: none;
-  }
-  p#text {
-    text-align: left;
   }
   li .signUp {
     color: white;
     -ms-grid-column-align: center;
         justify-self: center;
     font-size: smaller;
-  }
-  #id01 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-  }
-  div#id01 input {
-    width: 240px;
-  }
-  button {
-    background-color: #dd0000;
-    font-size: 0.88em !important;
-  }
-  input {
-    width: 25vw;
-    border-style: solid;
-    border: black;
-    border-radius: 0;
   }
   input[type="search"] {
     -webkit-appearance: none;
@@ -341,6 +341,14 @@ p#text {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
+  }
+  .socials {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 30px 0 10px 0;
   }
   .row-1,
   .row-2,
@@ -465,27 +473,11 @@ p#text {
     width: 12px;
     height: 12px;
   }
-  .socials {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin: 0;
-  }
-  input {
-    width: 55vw;
-    border-style: solid;
-    border: black;
-    border-radius: 0;
-  }
   input[type="search"] {
     -webkit-appearance: none;
   }
-  .signup {
-    text-transform: uppercase;
-    color: #ffffff;
-    white-space: nowrap;
+  input#MERGE0.field {
+    height: 40px;
   }
   .signUpItem {
     display: none;
@@ -507,6 +499,14 @@ p#text {
   }
   #m5 {
     letter-spacing: 10px;
+  }
+  .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0;
   }
   .row-1,
   .row-2,

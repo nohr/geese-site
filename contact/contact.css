@@ -5,15 +5,14 @@ html {
   touch-action: manipulation;
 }
 
-.container{
+.container {
   margin-top: 0px;
   height: 100%;
-  overflow-y: scroll;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-.text{
+.text {
   display: grid;
   margin: 20px;
   text-align: center;
@@ -23,7 +22,6 @@ p {
   color: #ffffff;
 }
 
-.title{
+.title {
   font-weight: 700;
 }
-

@@ -18,7 +18,8 @@ html {
   grid-column-end: 1;
   grid-row-start: 2;
   grid-row-end: 2;
-  overflow-y: scroll;
+  overflow-y: hidden;
+  margin: 0 40px;
 }
 
 .bit-location {
@@ -33,7 +34,7 @@ html {
   white-space: nowrap;
 }
 
-.bit-widget.bit-layout-ipad .bit-event-list-title{
+.bit-widget.bit-layout-ipad .bit-event-list-title {
   margin-left: auto;
   margin-right: auto;
   text-transform: uppercase;
@@ -70,45 +71,14 @@ html {
   grid-column-end: 1;
   grid-row-start: 3;
   grid-row-end: 3;
-  width: 100%;
-}
-
-#id02 {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: min-content;
-}
-button{
-  background-color: #dd0000;
-  font-size: 0.88em !important;
-}
-
-input{
-  width: 55vw;
-  border-style: solid;
-  border: black;
-  border-radius: 0;
 }
 
 input[type="search"] {
   -webkit-appearance: none;
 }
 
-.signupbtn {
-  text-transform: uppercase;
-  color: #ffffff;
-  white-space: nowrap;
-}
-
-@media only screen and (min-width: 768px) {
-  input{
-    width: 25vw;
-  }
-}
-
 @media only screen and (max-width: 768px) {
-  input{
-    width: 55vw;
-  }  
+  div.tourSignup div.signUp form {
+    margin: 0 50px;
+  }
 }
