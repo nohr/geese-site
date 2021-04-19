@@ -77,6 +77,12 @@ input[type="search"] {
   -webkit-appearance: none;
 }
 
+@media only screen and (min-width: 768px) {
+  div.tourSignup input#MERGE0.field{
+    height: 40px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   div.tourSignup div.signUp form {
     margin: 0 50px;
