@@ -29,9 +29,7 @@ html {
 }
 
 .row-music {
-  margin: 0 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
   column-gap: 50px;
   row-gap: 25px;
   height: fit-content;
