@@ -81,6 +81,9 @@ input[type="search"] {
   div.tourSignup input#MERGE0.field{
     height: 40px;
   }
+  .songkick{
+    margin: 0 20vw;
+  }
 }
 
 @media only screen and (max-width: 768px) {

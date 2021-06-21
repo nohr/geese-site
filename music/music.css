@@ -5,21 +5,20 @@ html {
   touch-action: manipulation;
 }
 
-.container{
+.container {
   height: 100%;
   display: grid;
   grid-template-rows: 20% 70% auto;
 }
 
-#album{
+#album {
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 2;
   grid-row-end: 2;
-  justify-self: center;
 }
 
-#text{
+#text {
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
@@ -27,4 +26,37 @@ html {
   justify-self: center;
   align-self: center;
   color: #ffffff;
+}
+
+.row-music {
+  margin: 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 25px;
+  height: fit-content;
+}
+
+img {
+  justify-self: end;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: x-large;
+  font-family: forma-djr-deck, sans-serif;
+  text-transform: uppercase;
+}
+
+.streamLink {
+  width: fit-content;
+  font-weight: 900;
+  font-size: 28px;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  background-color: #dd0000;
+  font-size: 0.88em !important;
 }

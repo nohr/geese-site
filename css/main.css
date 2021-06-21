@@ -1,43 +1,12 @@
 @import url("https://p.typekit.net/p.css?s=1&k=qbw2bro&ht=tk&f=12560.12561.12562.12563&a=55228952&app=typekit&e=css");
+@import url("https://use.typekit.net/qbw2bro.css");
 * {
   -webkit-font-smoothing: antialiased;
 }
 
-@font-face {
-  font-family: "vag-rundschrift-d";
-  src: url("https://use.typekit.net/af/7be1d2/000000000000000077359f08/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/7be1d2/000000000000000077359f08/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/7be1d2/000000000000000077359f08/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "vag-rundschrift-d";
-  src: url("https://use.typekit.net/af/928ec3/000000000000000077359f0e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/928ec3/000000000000000077359f0e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/928ec3/000000000000000077359f0e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "vag-rundschrift-d";
-  src: url("https://use.typekit.net/af/071449/000000000000000077359f0d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"), url("https://use.typekit.net/af/071449/000000000000000077359f0d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"), url("https://use.typekit.net/af/071449/000000000000000077359f0d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");
-  font-display: auto;
-  font-style: italic;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "vag-rundschrift-d";
-  src: url("https://use.typekit.net/af/1073af/000000000000000077359f13/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/1073af/000000000000000077359f13/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/1073af/000000000000000077359f13/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
-  font-display: auto;
-  font-style: italic;
-  font-weight: 400;
-}
-
 body,
 html {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -64,9 +33,9 @@ ul {
 h1 {
   color: #ffffff;
   text-align: center;
-  font-family: "vag-rundschrift-d", sans-serif;
-  font-weight: 300;
-  font-style: light;
+  font-family: forma-djr-deck, sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
 /* Set a style for all buttons */
@@ -177,6 +146,7 @@ input.button {
   padding: 15px;
   margin: 0;
   -webkit-appearance: none;
+  height: 39px;
 }
 
 td {
@@ -231,8 +201,6 @@ tbody {
     grid-row-end: 3;
   }
   .drop-wrapper {
-    font-family: "vag-rundschrift-d", sans-serif;
-    font-weight: 300;
     font-style: light;
   }
   .drop-wrapper {
@@ -260,7 +228,7 @@ tbody {
   }
   .drop-menu {
     text-align: left;
-    font-size: 20px;
+    font-size: 14px;
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 1;
@@ -287,8 +255,8 @@ tbody {
   }
   /* SignUp */
   input#MERGE0.field {
-    width: 25vw;
-    height: 44px;
+    width: 16vw;
+    height: 37px;
   }
   #signUp {
     display: none;
@@ -338,6 +306,12 @@ tbody {
     width: min-content;
   }
   #m5 {
+    letter-spacing: 10px;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+  #m6 {
     letter-spacing: 10px;
     width: -webkit-min-content;
     width: -moz-min-content;
@@ -409,10 +383,6 @@ tbody {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-  }
-  .drop-wrapper {
-    font-family: "vag-rundschrift-d", sans-serif;
-    font-weight: 300;
   }
   .drop-wrapper {
     margin: auto 0 0 0;

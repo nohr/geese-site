@@ -3,61 +3,11 @@
   -webkit-font-smoothing: antialiased;
 }
 @import url("https://p.typekit.net/p.css?s=1&k=qbw2bro&ht=tk&f=12560.12561.12562.12563&a=55228952&app=typekit&e=css");
+@import url("https://use.typekit.net/qbw2bro.css");
 
-@font-face {
-  font-family: "vag-rundschrift-d";
-  src: url("https://use.typekit.net/af/7be1d2/000000000000000077359f08/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-      format("woff2"),
-    url("https://use.typekit.net/af/7be1d2/000000000000000077359f08/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-      format("woff"),
-    url("https://use.typekit.net/af/7be1d2/000000000000000077359f08/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-      format("opentype");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "vag-rundschrift-d";
-  src: url("https://use.typekit.net/af/928ec3/000000000000000077359f0e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
-      format("woff2"),
-    url("https://use.typekit.net/af/928ec3/000000000000000077359f0e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
-      format("woff"),
-    url("https://use.typekit.net/af/928ec3/000000000000000077359f0e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3")
-      format("opentype");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "vag-rundschrift-d";
-  src: url("https://use.typekit.net/af/071449/000000000000000077359f0d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3")
-      format("woff2"),
-    url("https://use.typekit.net/af/071449/000000000000000077359f0d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3")
-      format("woff"),
-    url("https://use.typekit.net/af/071449/000000000000000077359f0d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3")
-      format("opentype");
-  font-display: auto;
-  font-style: italic;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "vag-rundschrift-d";
-  src: url("https://use.typekit.net/af/1073af/000000000000000077359f13/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
-      format("woff2"),
-    url("https://use.typekit.net/af/1073af/000000000000000077359f13/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
-      format("woff"),
-    url("https://use.typekit.net/af/1073af/000000000000000077359f13/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
-      format("opentype");
-  font-display: auto;
-  font-style: italic;
-  font-weight: 400;
-}
 body,
 html {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -78,9 +28,9 @@ ul {
 h1 {
   color: #ffffff;
   text-align: center;
-  font-family: "vag-rundschrift-d", sans-serif;
-  font-weight: 300;
-  font-style: light;
+  font-family: forma-djr-deck, sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
 /* Set a style for all buttons */
@@ -91,6 +41,8 @@ button {
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+  background-color: #dd0000;
+  font-size: 0.88em !important;
 }
 
 .logo {
@@ -141,11 +93,6 @@ table {
   border-spacing: 0px;
 }
 
-button {
-  background-color: #dd0000;
-  font-size: 0.88em !important;
-}
-
 input#MERGE0.field {
   border-style: solid;
   border: black;
@@ -167,6 +114,7 @@ input.button {
   padding: 15px;
   margin: 0;
   -webkit-appearance: none;
+  height: 39px;
 }
 
 td {
@@ -219,8 +167,6 @@ tbody {
   }
 
   .drop-wrapper {
-    font-family: "vag-rundschrift-d", sans-serif;
-    font-weight: 300;
     font-style: light;
   }
 
@@ -253,7 +199,7 @@ tbody {
 
   .drop-menu {
     text-align: left;
-    font-size: 20px;
+    font-size: 14px;
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 3;
@@ -276,8 +222,8 @@ tbody {
 
   /* SignUp */
   input#MERGE0.field {
-    width: 25vw;
-    height: 44px;
+    width: 16vw;
+    height: 37px;
   }
   #signUp {
     display: none;
@@ -323,7 +269,10 @@ tbody {
     letter-spacing: 10px;
     width: min-content;
   }
-
+  #m6 {
+    letter-spacing: 10px;
+    width: min-content;
+  }
   .socials {
     display: inline-flex;
     justify-content: space-around;
@@ -376,11 +325,6 @@ tbody {
     grid-row-end: 3;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .drop-wrapper {
-    font-family: "vag-rundschrift-d", sans-serif;
-    font-weight: 300;
   }
 
   .drop-wrapper {

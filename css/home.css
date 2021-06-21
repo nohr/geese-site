@@ -7,8 +7,12 @@ html {
   background-size: cover;
 }
 
-@media only screen and (max-width: 768px) {
+.modal {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
   .modal {
-    display: block;
+    text-align: center;
   }
 }

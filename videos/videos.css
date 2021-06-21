@@ -1,0 +1,42 @@
+body,
+html {
+  background-color: #000000;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 20% 70% auto;
+}
+
+#album {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  justify-self: center;
+}
+
+#text {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  justify-self: center;
+  align-self: center;
+  color: #ffffff;
+}
+
+col {
+  position: relative;
+}
+iframe {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
