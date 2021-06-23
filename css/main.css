@@ -329,7 +329,9 @@ tbody {
   .row-5,
   .row-6,
   .row-7,
-  .row-8 {
+  .row-8,
+  .row-9,
+  .row-10 {
     min-height: 5px;
     padding: 0 auto;
     margin-right: 30px;
