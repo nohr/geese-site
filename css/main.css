@@ -146,6 +146,10 @@ input.button {
   height: 40px;
 }
 
+form {
+  display: inline-block;
+}
+
 td {
   padding: 0;
 }
