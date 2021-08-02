@@ -8,7 +8,7 @@ html {
 .container {
   height: 100%;
   display: grid;
-  grid-template-rows: 20% 70% auto;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 #album {
@@ -33,10 +33,6 @@ col {
   position: relative;
 }
 iframe {
-  width: 60%;
-  height: 60%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  position: relative;
 }

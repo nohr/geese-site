@@ -8,7 +8,7 @@ html {
 .container {
   height: 100%;
   display: grid;
-  grid-template-rows: 20% 70% auto;
+  grid-template-rows: 10% 90%;
 }
 
 #album {

@@ -143,8 +143,14 @@ input.button {
   padding: 15px;
   margin: 0;
   -webkit-appearance: none;
-  height: 40px;
 }
+
+/* @media only screen and (min-width: 1280px) {
+  input.button{
+  height: 40px;
+  }
+
+} */
 
 form {
   display: inline-block;
@@ -451,7 +457,7 @@ tbody {
     -webkit-appearance: none;
   }
   input#MERGE0.field {
-    height: 38px;
+    height: 40px;
   }
   .signUpItem {
     display: none;

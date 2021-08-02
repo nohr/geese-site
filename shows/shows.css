@@ -8,7 +8,7 @@ html {
 
 .container {
   display: grid;
-  grid-template-rows: 0.4fr 1.4fr 1.2fr;
+  grid-template-rows: 10% auto 80vw;
   height: 100%;
   width: 100%;
 }
@@ -79,7 +79,7 @@ input[type="search"] {
 
 @media only screen and (min-width: 768px) {
   div.tourSignup input#MERGE0.field{
-    height: 38px;
+    height: 40px;
   }
   .songkick{
     margin: 0 20vw;
