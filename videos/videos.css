@@ -33,6 +33,12 @@ col {
   position: relative;
 }
 iframe {
-  width: 100%;
   position: relative;
+  margin: auto;
+}
+
+.videos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
