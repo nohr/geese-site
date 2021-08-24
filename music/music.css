@@ -11,28 +11,34 @@ html {
   grid-template-rows: 10% 90%;
 }
 
-#album {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
-}
-
-#text {
+.album {
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 1;
-  justify-self: center;
-  align-self: center;
+}
+
+.text {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
   color: #ffffff;
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 20px 0;
 }
 
 .row-music {
   margin: 0 auto;
   column-gap: 50px;
   row-gap: 25px;
-  height: fit-content;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
 }
 
 img {
@@ -40,12 +46,21 @@ img {
 }
 
 h2 {
-  color: #ffffff;
   font-size: x-large;
-  font-family: forma-djr-deck, sans-serif;
   text-transform: uppercase;
 }
+span {
+  font-style: italic;
+  font-size: x-small;
+}
 
+h2,
+span {
+  display: inline;
+  color: #ffffff;
+  font-family: forma-djr-deck, sans-serif;
+  width: fit-content;
+}
 .streamLink {
   width: fit-content;
   font-weight: 900;
@@ -57,4 +72,17 @@ h2 {
   opacity: 0.9;
   background-color: #dd0000;
   font-size: 0.88em !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .row-music {
+    margin-top: 30px;
+    flex-direction: column;
+    padding-bottom: 90px;
+    row-gap: 50px;
+  }
+  .musicWrap img {
+    height: 85vw;
+    width: 85vw;
+  }
 }

@@ -8,50 +8,9 @@ html {
 
 .container {
   display: grid;
-  grid-template-rows: 10% auto 80vw;
+  grid-template-rows: 10% auto 5%;
   height: 100%;
   width: 100%;
-}
-
-.bit-widget-container {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
-  overflow-y: hidden;
-  margin: 0 40px;
-}
-
-.bit-location {
-  font-weight: 100 !important;
-}
-
-.bit-event-buttons {
-  padding: 0 12px !important;
-  font-size: 11px !important;
-  min-width: 150px;
-  text-align: right;
-  white-space: nowrap;
-}
-
-.bit-widget.bit-layout-ipad .bit-event-list-title {
-  margin-left: auto;
-  margin-right: auto;
-  text-transform: uppercase;
-  font-weight: 100;
-  font-size: x-large;
-}
-
-.bit-details {
-  margin-left: 20px;
-}
-
-.bit-event-buttons {
-  min-width: max-content;
-}
-
-.bit-widget.bit-layout-ipad .bit-event .bit-button {
-  width: 80px !important;
 }
 
 .blankDiv {
@@ -73,15 +32,22 @@ html {
   grid-row-end: 3;
 }
 
+.signUp {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 input[type="search"] {
   -webkit-appearance: none;
 }
 
 @media only screen and (min-width: 768px) {
-  div.tourSignup input#MERGE0.field{
+  div.tourSignup input#MERGE0.field {
     height: 40px;
   }
-  .songkick{
+  .songkick {
     margin: 0 20vw;
   }
 }
@@ -89,5 +55,8 @@ input[type="search"] {
 @media only screen and (max-width: 768px) {
   div.tourSignup div.signUp form {
     margin: 0 50px;
+  }
+  .signUp {
+    padding-bottom: 90px;
   }
 }

@@ -11,14 +11,6 @@ html {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-#album {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
-  justify-self: center;
-}
-
 #text {
   grid-column-start: 1;
   grid-column-end: 1;
@@ -29,16 +21,23 @@ html {
   color: #ffffff;
 }
 
-col {
-  position: relative;
-}
 iframe {
   position: relative;
   margin: auto;
+  width: 80vw;
+  height: 45vw;
 }
 
-.videos{
+.videoWrap {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  row-gap: 50px;
+  padding-bottom: 90px;
+}
+
+@media only screen and (max-width: 768px) {
+  .videoWrap {
+    margin-top: 30px;
+    flex-direction: column;
+  }
 }
