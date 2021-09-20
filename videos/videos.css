@@ -31,7 +31,7 @@ iframe {
 .videoWrap {
   display: flex;
   flex-direction: column;
-  row-gap: 50px;
+  row-gap: 100px;
   padding-bottom: 90px;
 }
 

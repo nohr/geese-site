@@ -22,7 +22,7 @@ html {
   text-align: center;
 }
 
-.tourSignup {
+.f {
   justify-self: center;
   font-size: smaller;
   width: max-content;
@@ -32,7 +32,7 @@ html {
   grid-row-end: 3;
 }
 
-.signUp {
+.showsSignUp {
   display: flex;
   justify-items: center;
   align-items: center;
@@ -47,6 +47,9 @@ input[type="search"] {
   div.tourSignup input#MERGE0.field {
     height: 40px;
   }
+  .showsSignUp{
+    padding-bottom: 130px;
+  }
   .songkick {
     margin: 0 20vw;
   }
@@ -56,7 +59,5 @@ input[type="search"] {
   div.tourSignup div.signUp form {
     margin: 0 50px;
   }
-  .signUp {
-    padding-bottom: 90px;
-  }
+
 }
