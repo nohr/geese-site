@@ -69,20 +69,7 @@ svg#icon {
 .modal {
   display: none;
   -ms-grid-column-align: center;
-  justify-self: center;
   font-size: smaller;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  -ms-grid-column: 1;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  -ms-grid-row: 3;
-  grid-row-start: 3;
-  grid-row-end: 3;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   color: #fff;
   background-color: #000000;
   position: absolute;
@@ -92,6 +79,7 @@ svg#icon {
   transform: translate(-50%, -50%);
   z-index: 900;
   padding: 20px;
+  width: 30%;
 }
 
 .formModal {
@@ -168,6 +156,12 @@ tbody {
 
 .signUp p {
   line-height: 24px;
+}
+
+.modalSignUp{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*NOT MOBILE*/
