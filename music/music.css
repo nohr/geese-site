@@ -79,6 +79,7 @@ span {
   opacity: 0.9;
   background-color: #dd0000;
   font-size: 0.88em !important;
+  -webkit-appearance: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -87,6 +88,9 @@ span {
     flex-direction: column;
     padding-bottom: 90px;
     row-gap: 50px;
+  }
+  .singles{
+    flex-direction: column;
   }
   .musicWrap img {
     height: 85vw;

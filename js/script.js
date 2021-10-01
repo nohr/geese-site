@@ -23,9 +23,9 @@ var btn = document.getElementById("m4");
 var span = document.getElementById("close");
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "flex";
-};
+// btn.onclick = function() {
+//   modal.style.display = "flex";
+// };
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
