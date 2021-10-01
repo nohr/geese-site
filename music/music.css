@@ -34,11 +34,18 @@ html {
 
 .row-music {
   margin: 0 auto;
+  padding-bottom: 130px;
   column-gap: 50px;
-  row-gap: 25px;
+  row-gap: 40px;
   height: max-content;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
+}
+
+.singles {
+  display: flex;
+  gap: 40px;
 }
 
 img {

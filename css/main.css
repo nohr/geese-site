@@ -69,7 +69,6 @@ svg#icon {
 .modal {
   display: none;
   -ms-grid-column-align: center;
-  font-size: smaller;
   color: #fff;
   background-color: #000000;
   position: absolute;
@@ -78,8 +77,18 @@ svg#icon {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 900;
-  padding: 20px;
-  width: 30%;
+  padding: 25px 20px;
+  /* height: 100%; */
+  width: min-content;
+}
+
+.modalSignUp input.button {
+  margin: 25px 0 0 0;
+}
+
+.modal .modalSignUp img {
+  height: 56vh;
+  width: auto;
 }
 
 .formModal {
@@ -129,7 +138,7 @@ input.button {
   border-radius: 0;
   cursor: pointer;
   padding: 15px;
-  margin: 0;
+
   -webkit-appearance: none;
 }
 
@@ -141,7 +150,9 @@ input.button {
 } */
 
 form {
-  display: inline-block;
+  display: inline-flex;
+  height: min-content;
+  align-items: baseline;
 }
 
 td {
@@ -152,13 +163,15 @@ tbody {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: flex-end;
+  height: min-content;
 }
 
 .signUp p {
   line-height: 24px;
 }
 
-.modalSignUp{
+.modalSignUp {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -168,7 +181,8 @@ tbody {
 @media only screen and (min-width: 768px) {
   svg#close {
     position: absolute;
-    right: 20px;
+    top: 1%;
+    right: 1%;
     z-index: 200;
     width: 12px;
     height: 12px;
@@ -277,7 +291,7 @@ tbody {
   /* SignUp */
   input#MERGE0.field {
     width: 16vw;
-    height: 37px;
+    height: 42px;
   }
   #signUp {
     display: none;
@@ -480,6 +494,7 @@ tbody {
     padding: 5px 0;
     display: block;
   }
+
   svg#close {
     position: absolute;
     right: 20px;
