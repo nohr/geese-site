@@ -43,6 +43,16 @@ html {
   flex-direction: column;
 }
 
+.musicWrap{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.musicWrap form{
+  margin: 0 auto;
+}
+
 .singles {
   display: flex;
   gap: 40px;
@@ -71,7 +81,6 @@ span {
 .streamLink {
   width: fit-content;
   font-weight: 900;
-  font-size: 28px;
   color: white;
   padding: 14px 20px;
   border: none;
