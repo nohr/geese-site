@@ -20,9 +20,14 @@ function getAccel(){
            // in the alpha-beta-gamma axes (units in degrees)
             window.addEventListener('deviceorientation',(event) => {
                 // Expose each orientation angle in a more readable way
-                rotation_degrees = event.alpha;
-                frontToBack_degrees = event.gamma;
-                leftToRight_degrees = event.beta;
+
+                if (window.matchMedia("(orientation: portrait)").matches) {
+                    leftToRight_degrees = event.gamma;
+                }
+
+                if (window.matchMedia("(orientation: landscape)").matches) {
+                    leftToRight_degrees = event.beta;
+                }
                 
                 dot = document.getElementsByClassName("beam")[0]
                 dot.setAttribute('style', "transform: rotate(" + (leftToRight_degrees) +"deg);");
