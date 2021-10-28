@@ -1,6 +1,6 @@
 body,
 html {
-  background-image: url("../img/art.jpg");
+  background-image: url("../img/art-no beam.png");
   background-color: #000000;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,8 +11,24 @@ html {
   display: block;
 }
 
+
 @media only screen and (min-width: 768px) {
   .modal {
     text-align: center;
   }
+}
+
+.beam{
+  width: 80px;
+  height: 480px;
+  background-image: url(../img/beam.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  e
+  background-color: #ebebeb00;
+  position: absolute;
+  top:0%;
+  left:45%;
+  mix-blend-mode: lighten;
+  transform-origin: bottom center;
 }

@@ -12,9 +12,29 @@ let i = parseFloat(margin.marginBottom);
 let logoPos = (intViewportHeight - (logoHeight.bottom + i));
 const mediaQuery = window.matchMedia('(min-width: 768px)')
 
+// Get Accelerometer data
+function getAccel(){
+    DeviceMotionEvent.requestPermission().then(response => {
+        if (response == 'granted') {
+       // Add a listener to get smartphone orientation 
+           // in the alpha-beta-gamma axes (units in degrees)
+            window.addEventListener('deviceorientation',(event) => {
+                // Expose each orientation angle in a more readable way
+                rotation_degrees = event.alpha;
+                frontToBack_degrees = event.gamma;
+                leftToRight_degrees = event.beta;
+                
+                dot = document.getElementsByClassName("beam")[0]
+                dot.setAttribute('style', "transform: rotate(" + (leftToRight_degrees) +"deg);");
+                
+            });
+        }
+    });
+}
 
 // Get the modal
 var modal = document.getElementsByClassName("modal")[0];
+var bg = document.getElementsByClassName("modalBG")[0];
 
 // Get the button that opens the modal
 var btn = document.getElementById("m4");
@@ -25,17 +45,22 @@ var span = document.getElementById("close");
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
   modal.style.display = "flex";
+    bg.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+    modal.style.display = "none";
+    bg.style.display = "none";
+    getAccel();
 };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == bg) {
     modal.style.display = "none";
+    bg.style.display = "none";
+    getAccel();
   }
 };
 

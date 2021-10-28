@@ -82,6 +82,12 @@ svg#icon {
   width: min-content;
 }
 
+.modalBG{
+background-color: #00000066;
+height: 100vh;
+width: 100vw;
+}
+
 .modalSignUp input.button {
   margin: 25px 0 0 0;
 }
