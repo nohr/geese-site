@@ -139,7 +139,7 @@ input#MERGE0.field::placeholder {
 input.button {
   background-color: #dd0000;
   color: #ffffff;
-  font-size: 0.88em !important;
+  font-size: 10px !important;
   border-width: 0px;
   border-color: black;
   border-radius: 0;
@@ -149,12 +149,10 @@ input.button {
   -webkit-appearance: none;
 }
 
-/* @media only screen and (min-width: 1280px) {
-  input.button{
-  height: 40px;
+  input#MERGE0.field {
+    width: 16vw;
+    height: 38px;
   }
-
-} */
 
 form {
   display: inline-flex;
@@ -296,10 +294,6 @@ tbody {
     display: block;
   }
   /* SignUp */
-  input#MERGE0.field {
-    width: 16vw;
-    height: 42px;
-  }
   #signUp {
     display: none;
   }
@@ -511,9 +505,6 @@ tbody {
   }
   input[type="search"] {
     -webkit-appearance: none;
-  }
-  input#MERGE0.field {
-    height: 40px;
   }
   .signUpItem {
     display: none;
