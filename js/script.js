@@ -59,7 +59,12 @@ btn.onclick = function() {
 span.onclick = function() {
     modal.style.display = "none";
     bg.style.display = "none";
+    var x = window.matchMedia("(max-width: 768px)")
+    if (x.matches){
     getAccel();
+    } else {
+        return 
+    }
 };
 
 // When the user clicks anywhere outside of the modal, close it
@@ -67,7 +72,12 @@ window.onclick = function(event) {
   if (event.target == bg) {
     modal.style.display = "none";
     bg.style.display = "none";
+    var x = window.matchMedia("(max-width: 768px)")
+    if (x.matches){
     getAccel();
+    } else { 
+        return
+    }
   }
 };
 
