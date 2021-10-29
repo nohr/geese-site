@@ -498,7 +498,8 @@ tbody {
 
   svg#close {
     position: absolute;
-    right: 20px;
+    right: 10px;
+    top: 10px;
     z-index: 200;
     width: 12px;
     height: 12px;

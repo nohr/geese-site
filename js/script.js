@@ -23,10 +23,12 @@ function getAccel(){
 
                 if (window.matchMedia("(orientation: portrait)").matches) {
                     leftToRight_degrees = event.gamma;
+                    frontToBack_degrees = event.beta;
                 }
 
                 if (window.matchMedia("(orientation: landscape)").matches) {
                     leftToRight_degrees = event.beta;
+                    frontToBack_degrees = event.gamma;
                 }
                 
                 dot = document.getElementsByClassName("beam")[0]
