@@ -5,21 +5,43 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: none;
 }
 
 .modal {
   display: block;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1366px) {
   .modal {
     text-align: center;
   }
+  body, html {
+  background-image: url("../img/art.jpg");
+  }
+  .beam, .accelDirections{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  body, html {
+  background-image: url("../img/art-no beam.png");
+  }
+  .beam, .accelDirections{
+    display: block;
+  }
+}
+
+.accelDirections{
+  display: block;
+  margin: 0;
 }
 
 .beam {
   width: 100vw;
   height: 100vh;
+  pointer-events: none;
   background-image: url(../img/beam.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -29,4 +51,5 @@ html {
   top: 0%;
   left: 0%;
   mix-blend-mode: lighten;
+  transform-origin: center 62%;
 }

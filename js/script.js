@@ -70,7 +70,7 @@ window.onclick = function(event) {
 };
 
 
-window.onload = (event) => {
+window.onload = () => {
     anime({
         targets: menu,
         easing: 'easeInOutExpo',
