@@ -35,7 +35,6 @@ html {
 }
 
 .accelDirections{
-  display: block;
   margin: 0;
 }
 
@@ -50,8 +49,8 @@ html {
   background-size: cover;
   background-color: #ebebeb00;
   position: absolute;
-  top: 0%;
+  top: 1%;
   left: 0%;
   mix-blend-mode: lighten;
-  transform-origin: center 62%;
+  transform-origin: 47% 58.5%;
 }
