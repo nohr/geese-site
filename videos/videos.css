@@ -7,6 +7,7 @@ html {
 
 .container {
   height: 100%;
+  width: 100vw !important;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
 }
@@ -29,6 +30,7 @@ iframe {
 }
 
 .videoWrap {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   row-gap: 100px;
