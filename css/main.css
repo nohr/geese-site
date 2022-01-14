@@ -60,6 +60,10 @@ button {
   opacity: 0.9;
   background-color: #dd0000;
   font-size: 1em !important;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
 }
 
 .logo {
