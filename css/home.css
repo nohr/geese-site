@@ -13,28 +13,36 @@ html {
   display: block;
 }
 
+.modal img {
+  margin-bottom: 20px;
+}
+
 @media only screen and (min-width: 768px) {
   .modal {
     text-align: center;
   }
-  body, html {
-  background-image: url("../img/art.jpg");
+  body,
+  html {
+    background-image: url("../img/art.jpg");
   }
-  .beam, .accelDirections{
+  .beam,
+  .accelDirections {
     display: none;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  body, html {
-  background-image: url("../img/art-no beam.png");
+  body,
+  html {
+    background-image: url("../img/art-no beam.png");
   }
-  .beam, .accelDirections{
+  .beam,
+  .accelDirections {
     display: block;
   }
 }
 
-.accelDirections{
+.accelDirections {
   margin: 0;
 }
 

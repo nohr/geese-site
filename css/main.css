@@ -51,6 +51,17 @@ button {
   font-size: 0.88em !important;
 }
 
+.linkbutton {
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+  background-color: #dd0000;
+  font-size: 1em !important;
+}
+
 .logo {
   height: 73px;
   cursor: pointer;
@@ -83,10 +94,10 @@ svg#icon {
   width: min-content;
 }
 
-.modalBG{
-background-color: #00000066;
-height: 100vh;
-width: 100vw;
+.modalBG {
+  background-color: #00000066;
+  height: 100vh;
+  width: 100vw;
 }
 
 .modalSignUp input.button {
@@ -149,10 +160,10 @@ input.button {
   -webkit-appearance: none;
 }
 
-  input#MERGE0.field {
-    width: 16vw;
-    height: 38px;
-  }
+input#MERGE0.field {
+  width: 16vw;
+  height: 38px;
+}
 
 form {
   display: inline-flex;
