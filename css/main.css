@@ -64,6 +64,7 @@ button {
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
+  border-radius: 0;
 }
 
 .logo {
