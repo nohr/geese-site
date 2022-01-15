@@ -67,6 +67,12 @@ button {
   border-radius: 0;
 }
 
+@media only screen and (max-height: 1028px) {
+  .linkbutton {
+    width: 50%;
+  }
+}
+
 .logo {
   height: 73px;
   cursor: pointer;
