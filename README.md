@@ -1,2 +1,4 @@
 # geeseband.com
- Homepage of the band, Geese coded in native javascript.
+ Homepage of the band, Geese.
+--- 
+ New website for album release!
