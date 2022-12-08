@@ -1,0 +1,19 @@
+.frame {
+  width: 100%;
+  position: relative;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.frame_img {
+  &:hover {
+    opacity: 75%;
+  }
+}
+
+.canvas {
+  //   position: absolute;
+  height: 100%;
+}
