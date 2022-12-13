@@ -1,6 +1,6 @@
 // import Link from "next/link";
 import styles from "./links.module.scss";
-import { CaslonItalian } from "../fonts/Font";
+import { CaslonItalian } from "../app/fonts/Font";
 
 const linkArray = [
   { title: "Listen Now", href: "https://listennow.com" },
