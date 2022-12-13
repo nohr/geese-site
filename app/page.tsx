@@ -1,7 +1,7 @@
 import { CaslonItalian } from "./fonts/Font";
 import styles from "./page.module.scss";
 import Links from "../links/Links";
-import Canvas from "../canvas/Canvas";
+import Canvas from "../canvas/canvas";
 
 export default function Home() {
   return (
