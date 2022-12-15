@@ -6,4 +6,4 @@
 
 ## Vercel deployment
 
-[geese-site.vercel.app](geese-site.vercel.app)
+[geese-site.vercel.app](https://geese-site.vercel.app/)
