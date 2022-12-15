@@ -15,17 +15,6 @@ a {
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3em;
-  margin: 0 0 10px;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 18vw;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -33,12 +22,5 @@ h1 {
   body {
     color: white;
     background: black;
-  }
-
-  h1 {
-    background: linear-gradient(180deg, #ffffff 0%, #aaaaaa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
   }
 }

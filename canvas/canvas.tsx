@@ -1,20 +1,31 @@
 "use client";
-
-import styles from "./canvas.module.scss";
-import Image from "next/image";
-import frame from "../public/frame.png";
+import React, { useEffect } from "react";
+import { Application, Assets, Sprite } from "pixi.js";
+import image from "../public/frame.png";
 // import Generated from "./dalle";
 
+//       {/* <Generated /> */}
+
 export default function Canvas() {
-  return (
-    <div className={styles.frame}>
-      <Image
-        priority
-        className={styles.frame_img}
-        src={frame}
-        alt="Frame for generated images"
-      />
-      {/* <Generated /> */}
-    </div>
-  );
+  // Use the useEffect hook to initialize the PIXI application when the component is mounted
+  useEffect(() => {
+    const app = new Application({
+      view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
+      resolution: window.devicePixelRatio || 1,
+      backgroundColor: "transparent",
+      width: 400,
+      height: 400,
+    });
+
+    (async () => {
+      const texture = await Assets.load(image);
+      const frame = new Sprite(texture);
+      frame.width = texture.width;
+      frame.height = texture.height;
+
+      app.stage.addChild(frame);
+    })();
+  }, []);
+
+  return <canvas id="pixi-canvas"></canvas>;
 }
