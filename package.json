@@ -15,16 +15,20 @@
     "@types/react-dom": "18.0.9",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
-    "next": "13.0.6",
+    "next": "^13.1.1",
+    "openai": "^3.1.0",
     "pixi.js": "^7.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^5.3.6",
     "typescript": "4.9.3"
   },
   "devDependencies": {
     "@types/pixi.js": "^5.0.0",
-    "@types/styled-components": "^5.1.26",
-    "sass": "^1.56.1"
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "sass": "^1.56.1",
+    "tailwindcss": "^3.2.4"
   }
 }

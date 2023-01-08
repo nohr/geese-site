@@ -1,17 +1,12 @@
-import { CaslonItalian } from "./fonts/Font";
-import styles from "./page.module.scss";
-import Links from "../links/Links";
-import Canvas from "../canvas/canvas";
-import { Geese } from "./titles.style";
+import Links from "../ui/links";
+import Canvas from "../ui/canvas";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <Geese style={CaslonItalian.style}>Geese</Geese>
-        <Canvas />
-        <Links />
-      </main>
+    <div className="flex h-full flex-col items-center justify-center px-8">
+      <h1>Geese</h1>
+      <Canvas />
+      <Links />
     </div>
   );
 }

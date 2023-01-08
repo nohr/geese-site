@@ -1,6 +1,3 @@
-import styles from "./links.module.scss";
-import { CaslonItalian } from "../app/fonts/Font";
-
 const linkArray = [
   { title: "Listen Now", href: "https://listennow.com" },
   { title: "Watch", href: "https://watch.com" },
@@ -8,20 +5,10 @@ const linkArray = [
   { title: "Merchandise", href: "https://shop.geeseband.com" },
 ];
 
-type linkProps = {
-  title: string;
-  href: string;
-};
-
-function Anchor(link: linkProps) {
+function Anchor(link: { title: string; href: string }) {
   const { title, href } = link;
   return (
-    <a
-      className={CaslonItalian.className}
-      href={href}
-      rel="noreferrer"
-      target="_blank"
-    >
+    <a className="uppercase" href={href} rel="noreferrer" target="_blank">
       {title}
     </a>
   );
@@ -29,7 +16,7 @@ function Anchor(link: linkProps) {
 
 export default function Links() {
   return (
-    <div className={styles.links}>
+    <div className="flex w-full flex-col flex-wrap items-center justify-center font-bold">
       {linkArray.map((link, index) => (
         <Anchor {...link} key={index} />
       ))}
