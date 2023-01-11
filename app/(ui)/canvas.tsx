@@ -5,7 +5,7 @@ import { Application, Assets, Sprite } from "pixi.js";
 import image from "@public/frame.png";
 import { TbLoaderQuarter } from "react-icons/tb";
 
-export default function Canvas() {
+export default function Canvas({ url }: { url: string | undefined }) {
   // const [loaded, setLoaded] = useState(false);
 
   // Use the useEffect hook to initialize the PIXI application when the component is mounted
