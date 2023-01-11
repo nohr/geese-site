@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Application, Assets, Sprite } from "pixi.js";
-import image from "../public/frame.png";
+import image from "@public/frame.png";
 import { TbLoaderQuarter } from "react-icons/tb";
 
 export default function Canvas() {

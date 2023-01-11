@@ -8,7 +8,7 @@ const linkArray = [
 function Anchor(link: { title: string; href: string }) {
   const { title, href } = link;
   return (
-    <a className="uppercase" href={href} rel="noreferrer" target="_blank">
+    <a href={href} rel="noreferrer" target="_blank">
       {title}
     </a>
   );
@@ -16,7 +16,7 @@ function Anchor(link: { title: string; href: string }) {
 
 export default function Links() {
   return (
-    <div className="flex w-full flex-col flex-wrap items-center justify-center font-bold">
+    <div className="flex w-full flex-col flex-wrap items-center justify-center gap-y-2 font-serif text-3xl uppercase">
       {linkArray.map((link, index) => (
         <Anchor {...link} key={index} />
       ))}
