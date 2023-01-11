@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'cracked-plaster': "url('/bg_cracked_plaster.jpg')",
+      },
       fontFamily: {
         serif: ['var(--font-iconic)', ...defaultTheme.fontFamily.serif],
       },
