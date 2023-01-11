@@ -24,6 +24,6 @@
       "@api/*": ["./pages/api/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/api/dalle.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/api/dalle.ts", "app/page.jsx"],
   "exclude": ["node_modules"]
 }

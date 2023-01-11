@@ -1,10 +1,13 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Application, Assets, Sprite } from "pixi.js";
 import image from "../public/frame.png";
+import { TbLoaderQuarter } from "react-icons/tb";
 
 export default function Canvas() {
+  // const [loaded, setLoaded] = useState(false);
+
   // Use the useEffect hook to initialize the PIXI application when the component is mounted
   useEffect(() => {
     const app = new Application({
@@ -17,14 +20,25 @@ export default function Canvas() {
     });
 
     (async () => {
-      const texture = await Assets.load(image);
-      const frame = new Sprite(texture);
-      frame.width = texture.width;
-      frame.height = texture.height;
+      await Assets.load(image).then((texture) => {
+        // setLoaded(true);
+        const frame = new Sprite(texture);
+        frame.width = texture.width;
+        frame.height = texture.height;
 
-      app.stage.addChild(frame);
+        app.stage.addChild(frame);
+      });
     })();
   }, []);
 
-  return <canvas id="pixi-canvas"></canvas>;
+  return (
+    <div
+      style={{
+        height: "400px",
+        width: "400px",
+      }}
+    >
+      <canvas id="pixi-canvas" className="h-full w-full"></canvas>
+    </div>
+  );
 }
