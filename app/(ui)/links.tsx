@@ -1,14 +1,14 @@
 const linkArray = [
-  { title: "3D Country", href: "https://listennow.com" },
-  { title: "Videos", href: "https://watch.com" },
-  { title: "Tour", href: "https://tourtickets.com" },
-  { title: "Merch", href: "https://shop.geeseband.com" },
+  { title: "Cowboy Nudes", href: "#" },
+  { title: "Watch", href: "https://www.youtube.com/@Geeseband"},
+  { title: "Tour", href: "https://www.bandsintown.com/a/342405-geese" },
+  { title: "Merch", href: "https://store.geeseband.com/" },
 ];
 
 function Anchor(link: { title: string; href: string }) {
   const { title, href } = link;
   return (
-    <a href={href} rel="noreferrer" target="_blank">
+    <a href={href} className="md:hover:animate-pulse" rel="noreferrer" target="_blank">
       {title}
     </a>
   );

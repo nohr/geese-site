@@ -21,7 +21,10 @@ module.exports = {
             '0 35px 35px rgba(0, 0, 0, 0.75)',
             '0 45px 45px rgba(0, 0, 0, 0.35)'
         ]
-      }
+      },
+      animation: {
+        'pulse': 'pulse 0.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
     },
   },
   plugins: [],
