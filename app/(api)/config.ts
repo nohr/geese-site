@@ -7,12 +7,11 @@ import {getStorage} from "firebase/storage";
 
 // Initialize Firebase
 const app = initializeApp({
-  apiKey: "AIzaSyBdrLb5d1GOEZvB268soWuFHXQV2zfQIXo",
-  authDomain: "geese-site.firebaseapp.com",
-  projectId: "geese-site",
-  storageBucket: "geese-site.appspot.com",
-  messagingSenderId: "794733014711",
-  appId: "1:794733014711:web:4c888ce297988d91296732",
-  measurementId: "G-4F870GCXD5"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId:process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 });
 export const storage = getStorage(app);

@@ -28,6 +28,8 @@
   "devDependencies": {
     "@types/pixi.js": "^5.0.0",
     "autoprefixer": "^10.4.13",
+    "encoding": "^0.1.13",
+    "eslint-config-prettier": "^8.6.0",
     "postcss": "^8.4.20",
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
