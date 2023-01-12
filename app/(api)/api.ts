@@ -33,12 +33,10 @@ export async function handleSeen(image: string | null) {
         const seenRef = ref(storage, "seen/" + photoRef.name);
         // upload the blob to the seen folder
         await uploadBytes(seenRef, blob).then((snapshot) => {
-            console.log("Uploaded a blob or file!");
+            console.log("Uploaded " + photoRef.name + " to seen folder!");
             // delete the blob from the unseen folder
-            // debugger;
-            // FIXME: this is firing way too early and causes the image to not render
-            // console.log("Deleted " + photoRef.name);
-            // deleteObject(photoRef);
+            console.log("Deleted " + photoRef.name + " from unseen folder!");
+            deleteObject(photoRef);
 
         });
         //  get the url of the blob in the seen folder
