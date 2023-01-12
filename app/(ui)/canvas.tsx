@@ -6,7 +6,7 @@ import frame from "@public/frame.png";
 import { FaHatCowboy } from "react-icons/fa";
 import { handleSeen } from "../(api)/api";
 
-export default function Canvas({ image }: { image: string | null }) {
+export default function Canvas({ image }: { image: string }) {
   const [loaded, setLoaded] = useState(false);
 
   // Use the useEffect hook to initialize the PIXI application when the component is mounted
@@ -25,7 +25,7 @@ export default function Canvas({ image }: { image: string | null }) {
 
       Assets.addBundle("images", {
         frameTex: frame,
-        photoTex: photo,
+        photoTex: photo as string,
       });
 
       await Assets.loadBundle("images").then(
