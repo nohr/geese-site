@@ -23,15 +23,15 @@ export async function pickImage(folder: string) {
     return url;
 }
 
-export async function handleSeen(image: string | null) {
-    if (image) {
+export async function handleSeen(image: string) {
+    if (image !== "no images!") {
         // make a storage reference to the unseen folder
         const photoRef = ref(storage, image);
         // get the blob from the unseen folder
         const blob = await getBlob(photoRef);
         // make a storage reference to the seen folder
         const seenRef = ref(storage, "seen/" + photoRef.name);
-        // upload the blob to the seen folder
+        // upload the blob to the seen folder 
         await uploadBytes(seenRef, blob).then((snapshot) => {
             console.log("Uploaded " + photoRef.name + " to seen folder!");
             // delete the blob from the unseen folder
@@ -42,7 +42,7 @@ export async function handleSeen(image: string | null) {
         //  get the url of the blob in the seen folder
         const url = await getDownloadURL(seenRef);
         return url;
-    } else {
+    } else if (image === "no images!") {
         // if there are no images in the unseen folder, pick a random image from the seen folder
         return pickImage("seen");
     }
