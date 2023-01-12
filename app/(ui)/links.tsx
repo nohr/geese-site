@@ -1,25 +1,40 @@
+"use client";
+
+import { useState } from "react";
+import Newsletter from "./newsletter";
+
 const linkArray = [
   { title: "Cowboy Nudes", href: "#" },
-  { title: "Watch", href: "https://www.youtube.com/@Geeseband"},
+  { title: "Watch", href: "https://www.youtube.com/@Geeseband" },
   { title: "Tour", href: "https://www.bandsintown.com/a/342405-geese" },
   { title: "Merch", href: "https://store.geeseband.com/" },
 ];
 
-function Anchor(link: { title: string; href: string }) {
+function Anchor({ className, link }: any) {
   const { title, href } = link;
   return (
-    <a href={href} className="md:hover:animate-pulse active:animate-pulse text-center w-fit" rel="noreferrer" target="_blank">
+    <a href={href} className={className} rel="noreferrer" target="_blank">
       {title}
     </a>
   );
 }
 
 export default function Links() {
+  const className =
+    "md:hover:animate-pulse active:animate-pulse text-center w-fit cursor-pointer select-none";
+
+  const [newsletter, setNewsletter] = useState(false);
   return (
-    <div className="flex w-full flex-col flex-wrap items-center justify-center gap-y-3 font-serif text-2xl uppercase overflow-y-scroll">
-      {linkArray.map((link, index) => (
-        <Anchor {...link} key={index} />
-      ))}
-    </div>
+    <>
+      {newsletter ? <Newsletter setNewsletter={setNewsletter} /> : null}
+      <div className="flex w-fit flex-col flex-wrap items-center justify-center gap-y-3 self-center font-serif text-2xl uppercase">
+        {linkArray.map((link, index) => (
+          <Anchor className={className} link={link} key={index} />
+        ))}
+        <div onClick={() => setNewsletter(true)} className={className}>
+          Newsletter
+        </div>
+      </div>
+    </>
   );
 }

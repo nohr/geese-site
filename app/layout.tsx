@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${CaslonIonic.variable} overflow-hidden overscroll-contain bg-cover bg-cracked-plaster [&_h1]:drop-shadow-2xl [&_svg]:drop-shadow-2xl [&_a]:drop-shadow-2xl`}
+      className={`${CaslonIonic.variable} overscroll-contain bg-cracked-plaster bg-cover [&_h1]:drop-shadow-2xl [&_svg]:drop-shadow-2xl [&_a]:drop-shadow-2xl`}
     >
       <head />
       <body>{children}</body>
