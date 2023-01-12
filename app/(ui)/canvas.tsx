@@ -5,6 +5,7 @@ import { Application, Assets, Sprite, Texture } from "pixi.js";
 import frame from "@public/frame.png";
 import { FaHatCowboy } from "react-icons/fa";
 import { handleSeen } from "../(api)/api";
+var Vibrant = require('node-vibrant');
 
 export default function Canvas({ image }: { image: string }) {
   const [loaded, setLoaded] = useState(false);
@@ -22,7 +23,8 @@ export default function Canvas({ image }: { image: string }) {
 
     (async () => {
       const photo = await handleSeen(image);
-
+      Vibrant.from(photo).getPalette()
+      .then((palette:any) => console.log(palette, typeof palette)).catch((err:any) => console.log(err));
       Assets.addBundle("images", {
         frameTex: frame,
         photoTex: photo as string,
