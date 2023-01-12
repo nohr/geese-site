@@ -39,11 +39,11 @@ export default function Canvas({ image }: { image: string | null }) {
           frame.height = frameTex.height;
 
           const photo = new Sprite(photoTex);
-          photo.width = frameTex.width - 130;
-          photo.height = frameTex.height - 130;
+          photo.width = frameTex.width - 125;
+          photo.height = frameTex.height - 125;
           photo.x = frameTex.width / 2;
           photo.y = frameTex.height / 2;
-          photo.anchor.set(0.49, 0.5);
+          photo.anchor.set(0.5, 0.5);
 
           app.stage.addChild(photo);
           app.stage.addChild(frame);
