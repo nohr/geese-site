@@ -1,11 +1,9 @@
-// export function changeThemeColor(color: string) {
-//     // change the theme color of the app
-//     document.documentElement.style.setProperty("--theme-color", color);
-// }
-
-export function changeThemeColor(color: any) {
-    // change the theme color of the app
-    console.log(color);
+export function changeThemeColor(color: string) {
+    console.log("Changing theme color to " + color);
     
-    // document.documentElement.style.setProperty("--theme-color", color);
+    // change the meta theme color
+    const meta = document.querySelector("meta[name=theme-color]");
+    if (meta) {
+        meta.setAttribute("content", color);
+    }
 }

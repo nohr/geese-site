@@ -25,7 +25,7 @@ export default function Canvas({ image }: { image: string }) {
     (async () => {
       const photo = await handleSeen(image);
       Vibrant.from(photo).getPalette()
-      .then((palette:any) => changeThemeColor(palette)).catch((err:any) => console.log(err));
+      .then((palette: { Vibrant: { hex: string; }; }) => changeThemeColor(palette.Vibrant.hex)).catch((err:any) => console.log(err));
       Assets.addBundle("images", {
         frameTex: frame,
         photoTex: photo as string,
@@ -49,7 +49,7 @@ export default function Canvas({ image }: { image: string }) {
           app.stage.addChild(photo);
           app.stage.addChild(frame);
         }
-      );
+      ).catch((err:any) => console.log(err));
     })();
   }, [image]);
 
