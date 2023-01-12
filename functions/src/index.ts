@@ -20,7 +20,7 @@ const openai = new OpenAIApi(configuration);
 const prompt = "A closeup cowboy smiling into the camera in vivid high definition in front of a mountain";
 
 export const generateImage = functions.pubsub
-    .schedule("*/15 * * * *")
+    .schedule("every 1 hours")
     .onRun(async () => {
       console.log("generating image");
       // Generate an image from the prompt
@@ -48,3 +48,6 @@ export const generateImage = functions.pubsub
       }
       return null;
     });
+
+// TODO: add a function that deletes oldest images from the seen folder
+// when it exceeds 1gb
