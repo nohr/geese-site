@@ -1,6 +1,5 @@
 import "./(ui)/globals.css";
 import localFont from "@next/font/local";
-import bg from "@public/bg_cracked_plaster.jpg";
 
 const CaslonIonic = localFont({
   src: [
@@ -21,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${CaslonIonic.variable} overflow-hidden overscroll-contain bg-cover bg-cracked-plaster`}
+      className={`${CaslonIonic.variable} overflow-hidden overscroll-contain bg-cover bg-cracked-plaster [&_h1]:drop-shadow-2xl [&_svg]:drop-shadow-2xl [&_a]:drop-shadow-2xl`}
     >
       <head />
       <body>{children}</body>
