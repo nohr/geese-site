@@ -3,13 +3,11 @@
 import React, { useEffect, useState } from "react";
 import { Application, Assets, Sprite, Texture } from "pixi.js";
 import frame from "@public/frame.png";
-import { TbLoaderQuarter } from "react-icons/tb";
+import { FaHatCowboy } from "react-icons/fa";
 import { handleSeen } from "../(api)/api";
 
 export default function Canvas({ image }: { image: string | null }) {
-  // const [loaded, setLoaded] = useState(false);
-
-  // download the passed image from the unseen folder and upload it to the seen folder
+  const [loaded, setLoaded] = useState(false);
 
   // Use the useEffect hook to initialize the PIXI application when the component is mounted
   useEffect(() => {
@@ -32,7 +30,7 @@ export default function Canvas({ image }: { image: string | null }) {
 
       await Assets.loadBundle("images").then(
         ({ frameTex, photoTex }: { frameTex: Texture; photoTex: Texture }) => {
-          // setLoaded(true);
+          setLoaded(true);
 
           const frame = new Sprite(frameTex);
           frame.width = frameTex.width;
@@ -58,7 +56,9 @@ export default function Canvas({ image }: { image: string | null }) {
         height: "400px",
         width: "400px",
       }}
+      className="flex flex-col items-center justify-center"
     >
+  {!loaded && <FaHatCowboy className="absolute block m-0 animate-bounce h-[150px] w-auto" />}
       <canvas id="pixi-canvas" className="h-full w-full"></canvas>
     </div>
   );
