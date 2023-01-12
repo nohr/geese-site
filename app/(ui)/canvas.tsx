@@ -1,12 +1,15 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Application, Assets, Sprite } from "pixi.js";
-import image from "@public/frame.png";
+import { Application, Assets, Sprite, Texture } from "pixi.js";
+import frame from "@public/frame.png";
 import { TbLoaderQuarter } from "react-icons/tb";
+import { handleSeen } from "../(api)/api";
 
-export default function Canvas({ url }: { url: string | undefined }) {
+export default function Canvas({ image }: { image: string | null }) {
   // const [loaded, setLoaded] = useState(false);
+
+  // download the passed image from the unseen folder and upload it to the seen folder
 
   // Use the useEffect hook to initialize the PIXI application when the component is mounted
   useEffect(() => {
@@ -20,14 +23,32 @@ export default function Canvas({ url }: { url: string | undefined }) {
     });
 
     (async () => {
-      await Assets.load(image).then((texture) => {
-        // setLoaded(true);
-        const frame = new Sprite(texture);
-        frame.width = texture.width;
-        frame.height = texture.height;
+      const photo = await handleSeen(image);
 
-        app.stage.addChild(frame);
+      Assets.addBundle("images", {
+        frameTex: frame,
+        photoTex: photo,
       });
+
+      await Assets.loadBundle("images").then(
+        ({ frameTex, photoTex }: { frameTex: Texture; photoTex: Texture }) => {
+          // setLoaded(true);
+
+          const frame = new Sprite(frameTex);
+          frame.width = frameTex.width;
+          frame.height = frameTex.height;
+
+          const photo = new Sprite(photoTex);
+          photo.width = frameTex.width - 130;
+          photo.height = frameTex.height - 130;
+          photo.x = frameTex.width / 2;
+          photo.y = frameTex.height / 2;
+          photo.anchor.set(0.49, 0.5);
+
+          app.stage.addChild(photo);
+          app.stage.addChild(frame);
+        }
+      );
     })();
   }, []);
 
