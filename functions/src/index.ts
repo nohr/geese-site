@@ -3,7 +3,7 @@
 
 import * as functions from "firebase-functions";
 import {Configuration, OpenAIApi} from "openai";
-import admin = require("firebase-admin");
+import * as admin from "firebase-admin";
 
 // Init Firebase Admin
 admin.initializeApp();
