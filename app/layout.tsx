@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${CaslonIonic.variable} overflow-hidden overscroll-contain bg-opacity-30 bg-cracked-plaster`}
+      className={`${CaslonIonic.variable} overflow-hidden overscroll-contain bg-cover bg-cracked-plaster`}
     >
       <head />
       <body>{children}</body>

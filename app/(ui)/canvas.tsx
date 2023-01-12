@@ -50,7 +50,7 @@ export default function Canvas({ image }: { image: string | null }) {
         }
       );
     })();
-  }, []);
+  }, [image]);
 
   return (
     <div
