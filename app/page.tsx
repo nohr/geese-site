@@ -13,7 +13,7 @@ export default async function Home() {
   const image = await pickImage("unseen");
   return (
     <div className="flex h-full flex-col items-center justify-center px-8">
-      <h1 className="font-serif text-xl font-normal">GEESE</h1>
+      <h1 className="font-serif text-2xl font-normal">GEESE</h1>
       <Canvas image={image} />
       <Links />
     </div>
