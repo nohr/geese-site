@@ -31,9 +31,9 @@ export default function Canvas({
   // Create PIXI app
   useEffect(() => {
     const mobile = window.innerWidth <= 768;
-    if (mobile) {
-      setSize(window.innerWidth - 30);
-    }
+    if (mobile) setSize(window.innerWidth - 30);
+
+    if (currentImage === "") return;
     app.current = new Application({
       view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
       resolution: 1,
@@ -44,7 +44,7 @@ export default function Canvas({
     });
 
     setCurrentImage(image);
-  }, [image, size]);
+  }, [currentImage, image, size]);
 
   // Fetch a new image when the mouse enters the ref element
   useEffect(() => {
