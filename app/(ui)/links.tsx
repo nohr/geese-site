@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import Newsletter from "./newsletter";
 
 const linkArray = [
@@ -19,11 +19,16 @@ function Anchor({ className, link }: any) {
   );
 }
 
-export default function Links() {
+export default function Links({
+  newsletter,
+  setNewsletter,
+}: {
+  newsletter: boolean;
+  setNewsletter: Dispatch<SetStateAction<boolean>>;
+}) {
   const className =
     "md:hover:animate-pulse active:animate-pulse text-center w-fit cursor-pointer select-none";
 
-  const [newsletter, setNewsletter] = useState(false);
   return (
     <>
       {newsletter ? <Newsletter setNewsletter={setNewsletter} /> : null}

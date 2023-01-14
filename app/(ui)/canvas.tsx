@@ -18,15 +18,18 @@ export default function Canvas({
   image,
   loaded,
   setLoaded,
+  newsletter,
 }: {
   image: string;
   loaded: boolean;
   setLoaded: Dispatch<SetStateAction<boolean>>;
+  newsletter: boolean;
 }) {
   const [size, setSize] = useState<number>(400);
   const ref = useRef<HTMLDivElement>(null!);
   const [currentImage, setCurrentImage] = useState<string>("");
   const app = useRef<Application>();
+  console.log("This site was made for Geese by Paredol. https://paredol.com/");
 
   // Create PIXI app
   useEffect(() => {
@@ -51,12 +54,14 @@ export default function Canvas({
   // Fetch a new image when the mouse enters the ref element
   useEffect(() => {
     async function handleMouseEnter() {
-      setCurrentImage(await pickImage("seen"));
-      setLoaded(false);
-      // console.log(currentImage);
+      if (!newsletter) {
+        setCurrentImage(await pickImage("seen"));
+        // setLoaded(false);
+        // console.log(currentImage);
+      }
     }
     ref.current.addEventListener("mouseenter", handleMouseEnter);
-  }, [setLoaded]);
+  }, [setLoaded, newsletter]);
 
   return (
     <>
@@ -164,7 +169,7 @@ function RenderedImage({ ...props }) {
       // only process image if its the first time its been seen
       if (firstRender.current === true) {
         photo = (await handleSeen(currentImage)) as string;
-        console.log(firstRender.current);
+        // console.log(firstRender.current);
         firstRender.current = false;
         await addToScene(photo, app.current, size, mobile).then(() =>
           setLoaded(true)

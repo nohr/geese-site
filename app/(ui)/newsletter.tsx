@@ -31,47 +31,46 @@ export default function Newsletter({ setNewsletter }: { setNewsletter: any }) {
         method="post"
         className="flex flex-col items-center gap-y-2"
       >
-        <input type="hidden" name="u" value="44a993044898cd57f20e98113" />
-        <input type="hidden" name="id" value="8d26f98d1a" />
-        <tr>
-          <td>
-            <input
-              type="email"
-              autoCapitalize="off"
-              autoCorrect="off"
-              name="MERGE0"
-              id="MERGE0"
-              size={25}
-              placeholder="Enter your email"
-              className="rounded-md  border-2 p-2 outline-none invalid:border-red-500"
-              value=""
-            />
-            <div className="error"></div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div
-              style={{ position: "absolute", left: "-5000px" }}
-              aria-hidden="true"
-            >
-              <input
-                type="text"
-                name="b_44a993044898cd57f20e98113_8d26f98d1a"
-                tabIndex={-1}
-                value=""
-              />
-            </div>
-            <input
-              type="submit"
-              className="w-min cursor-pointer rounded-md p-2 text-white"
-              // onClick={() => setNewsletter(false)}
-              style={{ backgroundColor: themeColor }}
-              name="submit"
-              value="Subscribe"
-            />
-          </td>
-        </tr>
+        <input
+          type="hidden"
+          name="u"
+          readOnly
+          value="44a993044898cd57f20e98113"
+        />
+        <input type="hidden" name="id" readOnly value="8d26f98d1a" />
+
+        <input
+          type="email"
+          autoCapitalize="off"
+          autoCorrect="off"
+          name="MERGE0"
+          id="MERGE0"
+          size={25}
+          placeholder="Enter your email"
+          className="rounded-md  border-2 p-2 outline-none invalid:border-red-500"
+        />
+        <div className="error"></div>
+
+        <div
+          style={{ position: "absolute", left: "-5000px" }}
+          aria-hidden="true"
+        >
+          <input
+            type="text"
+            name="b_44a993044898cd57f20e98113_8d26f98d1a"
+            tabIndex={-1}
+            readOnly
+            value=""
+          />
+        </div>
+        <input
+          type="submit"
+          className="w-min cursor-pointer rounded-md p-2 text-white"
+          // onClick={() => setNewsletter(false)}
+          style={{ backgroundColor: themeColor }}
+          name="submit"
+          value="Subscribe"
+        />
       </form>
     </div>
   );
