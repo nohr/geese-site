@@ -29,8 +29,7 @@ export default function Canvas({
   const ref = useRef<HTMLDivElement>(null!);
   const [currentImage, setCurrentImage] = useState<string>("");
   const app = useRef<Application>();
-  console.log("This site was made for Geese by Paredol. https://paredol.com/");
-
+  
   // Create PIXI app
   useEffect(() => {
     const mobile = window.innerWidth <= 768;
@@ -45,8 +44,7 @@ export default function Canvas({
       width: size,
       height: size,
     });
-
-    // console.log(app.current);
+    app.current.stage.sortableChildren = true;
 
     setCurrentImage(image);
   }, [image]);
@@ -108,6 +106,7 @@ function Frame({ ...props }) {
           frame.anchor.set(0.5);
           frame.x = size / 2;
           frame.y = size / 2;
+          frame.zIndex = 100;
 
           // console.log(frame);
 
@@ -131,7 +130,7 @@ function generateSprite(photoTex: Texture, size: number, mobile: boolean) {
   photo.height = size - (mobile ? 120 : 100);
   photo.x = size / 2;
   photo.y = size / 2;
-  photo.zIndex = 0;
+  photo.zIndex = -100;
   photo.anchor.set(0.5, 0.5);
   return photo;
 }
