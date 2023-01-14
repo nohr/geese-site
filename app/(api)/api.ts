@@ -33,9 +33,9 @@ export async function handleSeen(image: string) {
         const seenRef = ref(storage, "seen/" + photoRef.name);
         // upload the blob to the seen folder 
         await uploadBytes(seenRef, blob).then((snapshot) => {
-            console.log("Uploaded " + photoRef.name + " to seen folder!");
+            // console.log("Uploaded " + photoRef.name + " to seen folder!");
             // delete the blob from the unseen folder
-            console.log("Deleted " + photoRef.name + " from unseen folder!");
+            // console.log("Deleted " + photoRef.name + " from unseen folder!");
             deleteObject(photoRef);
 
         });

@@ -1,8 +1,10 @@
-import {FaHatCowboy} from "react-icons/fa";
+// import {FaHatCowboy} from "react-icons/fa";
 
 export default function Loading() {
-  return <div className="flex flex-col w-full h-full items-center text-4xl font-serif justify-center">
-  <FaHatCowboy className="animate-bounce" />
-  <h1> Loading... </h1>
-  </div>;
+  return (
+    <div className="flex h-full w-full flex-col items-center justify-center font-serif text-4xl">
+      {/* <FaHatCowboy className="animate-bounce" /> */}
+      <h1> Loading... </h1>
+    </div>
+  );
 }
