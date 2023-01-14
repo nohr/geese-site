@@ -31,9 +31,9 @@ export default function Canvas({
   // Create PIXI app
   useEffect(() => {
     const mobile = window.innerWidth <= 768;
+    let size = mobile ? window.innerWidth - 30 : 400;
     if (mobile) setSize(window.innerWidth - 30);
 
-    if (currentImage === "") return;
     app.current = new Application({
       view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
       resolution: 1,
@@ -43,8 +43,10 @@ export default function Canvas({
       height: size,
     });
 
+    // console.log(app.current);
+
     setCurrentImage(image);
-  }, [currentImage, image, size]);
+  }, [image]);
 
   // Fetch a new image when the mouse enters the ref element
   useEffect(() => {
@@ -73,22 +75,23 @@ export default function Canvas({
       </div>
       <RenderedImage
         app={app}
-        size={size}
         currentImage={currentImage}
         setLoaded={setLoaded}
       />
-      {loaded && <Frame app={app} currentImage={currentImage} size={size} />}
+      {loaded && <Frame app={app} currentImage={currentImage} />}
     </>
   );
 }
 
 function Frame({ ...props }) {
-  const { app, currentImage, size } = props;
+  const { app, currentImage } = props;
   // Use the useEffect hook to add the frame to the PIXI scene
   useEffect(() => {
+    const mobile = window.innerWidth <= 768;
+    let size = mobile ? window.innerWidth - 30 : 400;
     // load the frame to the PIXI scene
+    if (currentImage === "") return;
     (async () => {
-      if (currentImage === "") return;
       await Assets.load(frame)
         .then((frameTex: Texture) => {
           // const fw = frameTex.width;
@@ -101,18 +104,23 @@ function Frame({ ...props }) {
           frame.x = size / 2;
           frame.y = size / 2;
 
+          // console.log(frame);
+
           // add frame to scene
           app.current.stage.addChild(frame);
         })
         .catch((err: any) => console.log(err));
     })();
-  }, [app, currentImage, size]);
+  }, [app, currentImage]);
   return <></>;
 }
 
 function generateSprite(photoTex: Texture, size: number, mobile: boolean) {
-  console.log(size);
   const photo = new Sprite(photoTex);
+  // photo.on("pointerdown", (event) => {
+  //   alert("clicked!");
+  //   console.log(event);
+  // });
   // adjust size and position of sprite
   photo.width = size - (mobile ? 120 : 100);
   photo.height = size - (mobile ? 120 : 100);
@@ -140,13 +148,13 @@ async function addToScene(
 }
 
 function RenderedImage({ ...props }) {
-  const { app, size, currentImage, setLoaded } = props;
-  // console.log(currentImage);
+  const { app, currentImage, setLoaded } = props;
 
   const firstRender = useRef(true);
   // Add image to scene
   useEffect(() => {
     const mobile = window.innerWidth <= 768;
+    let size = mobile ? window.innerWidth - 30 : 400;
     if (currentImage === "") return;
     (async () => {
       // process image in storage bucket
@@ -167,7 +175,7 @@ function RenderedImage({ ...props }) {
         );
       }
     })();
-  }, [app, currentImage, setLoaded, size]);
+  }, [app, currentImage, setLoaded]);
 
   return <></>;
 }
