@@ -13,7 +13,7 @@ const linkArray = [
 function Anchor({ className, link }: any) {
   const { title, href } = link;
   return (
-    <a href={href} className={className} rel="noreferrer">
+    <a href={href} className={className} rel="noreferrer" target="_blank">
       {title}
     </a>
   );
