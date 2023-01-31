@@ -12,7 +12,7 @@ import { FaHatCowboy } from "react-icons/fa";
 import { handleSeen, pickImage } from "../(api)/api";
 import { colorTheme } from "../utils";
 
-export default function Canvas({ image }: { image: string }) {
+export default function Canvas() {
   const [currentImage, setCurrentImage] = useState<string>("");
 
   return (

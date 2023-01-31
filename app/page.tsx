@@ -5,11 +5,6 @@ export const dynamic = "auto",
   runtime = "nodejs",
   preferredRegion = "auto";
 
-import Content from "./(ui)/content";
-import { pickImage } from "./(api)/api";
-
 export default async function Home() {
-  const image = await pickImage("unseen");
-
-  return <Content image={image} />;
+  return <></>;
 }
