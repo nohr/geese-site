@@ -12,16 +12,7 @@ import { FaHatCowboy } from "react-icons/fa";
 import { handleSeen, pickImage } from "../(api)/api";
 import { colorTheme } from "../utils";
 
-export default function Canvas({
-  image,
-  loaded,
-  setLoaded,
-}: {
-  image: string;
-  loaded: boolean;
-  setLoaded: Dispatch<SetStateAction<boolean>>;
-  newsletter: boolean;
-}) {
+export default function Canvas({ image }: { image: string }) {
   const [currentImage, setCurrentImage] = useState<string>("");
 
   return (
@@ -32,11 +23,7 @@ export default function Canvas({
           width: `360px`,
         }}
         className="flex flex-col items-center justify-center self-center"
-      >
-        {!loaded ? (
-          <FaHatCowboy className="absolute m-0 block h-[150px] w-auto animate-bounce" />
-        ) : null}
-      </div>
+      ></div>
     </>
   );
 }

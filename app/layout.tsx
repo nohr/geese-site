@@ -18,10 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${CaslonIonic.variable} overscroll-contain bg-cracked-plaster bg-cover [&_h1]:drop-shadow-2xl [&_svg]:drop-shadow-2xl [&_a]:drop-shadow-2xl`}
-    >
+    <html lang="en" className={`${CaslonIonic.variable} overscroll-contain`}>
       <head />
       <body>{children}</body>
     </html>
