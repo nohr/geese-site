@@ -14,7 +14,7 @@ import grabImages from "api";
 	<main>
     <div class="flex h-full w-full flex-col items-center pt-3 md:justify-center">
       <Canvas images={images} client:only="react" />
-      <Links />
+      <Links client:only="react"/>
     </div>
 	</main>
 </Layout>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Newsletter from "./newsletter";
-import {Twiddle,Tag} from "./nav.svg"
+import {Twiddle} from "./nav.svg"
 
 const linkArray = [
   { title: "cowboy nudes", href: "https://geese.lnk.to/cowboynudes" },
