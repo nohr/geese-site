@@ -5,6 +5,17 @@ export const dynamic = "auto",
   runtime = "nodejs",
   preferredRegion = "auto";
 
+import grabImages from "./(api)";
+import Canvas from "./(ui)/canvas";
+import Links from "./(ui)/links";
+
 export default async function Home() {
-  return <></>;
+  const images = await grabImages();
+
+  return (
+    <div className="flex h-full w-full flex-col items-center pt-3 md:justify-center">
+      <Canvas />
+      <Links />
+    </div>
+  );
 }
