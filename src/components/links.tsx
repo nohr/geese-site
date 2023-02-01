@@ -27,7 +27,7 @@ export default function Links({ tag }: { tag: string }) {
     <>
       
         <div>
-        <div className={`flex flex-col justify-center h-[213px] p-[13px_0_18px_0] items-center bg-[url(${tag})] w-[156px] [svg]:p-[4px_0_8px_0]`}
+        <div className={`flex flex-col justify-center h-[213px] p-[13px_0_18px_0] items-center bg-[url("/tag.svg")] w-[156px] [svg]:p-[4px_0_8px_0]`}
         style={{backgroundPosition:"top 9px left 0px", backgroundRepeat:"no-repeat", backgroundSize:"156px auto", }}>
             <div className ='flex italic text-3xl title'>GEESE</div>
       <Twiddle />
