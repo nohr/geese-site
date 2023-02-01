@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 // import { colorTheme } from "./utils";
 import Frame from "../assets/frame_shadow_comp.png"

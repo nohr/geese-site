@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import Newsletter from "./newsletter";
 import {Twiddle,Tag} from "./nav.svg"

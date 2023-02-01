@@ -1,5 +1,5 @@
 import React from "react";
-import { GrClose } from "react-icons/gr";
+// import { GrClose } from "react-icons/gr";
 
 export default function Newsletter({ setNewsletter }: { setNewsletter: any }) {
   // get the theme color from meta tag
@@ -19,10 +19,10 @@ export default function Newsletter({ setNewsletter }: { setNewsletter: any }) {
       }}
       className={`bg absolute flex h-min w-4/5 flex-col gap-y-5 rounded-lg p-4 pt-8 md:w-72`}
     >
-      <GrClose
+      <div
         onClick={() => setNewsletter(false)}
         className="absolute top-1 right-1 m-2 h-8 w-auto cursor-pointer md:h-6"
-      />
+      >Close</div>
       <p style={{ color: themeColor }} className="text-center">
         Join our newsletter
       </p>
