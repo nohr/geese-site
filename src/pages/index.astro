@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Canvas from "../components/canvas"
 import Links from 'src/components/links';
+import tag from "./assets/tag.svg";
 import grabImages from "api";
 	
 	const images = await grabImages();
@@ -14,7 +15,7 @@ import grabImages from "api";
 	<main>
     <div class="flex h-full w-full flex-col items-center pt-3 md:justify-center">
       <Canvas images={images} client:only="react" />
-      <Links client:only="react"/>
+      <Links tag={tag} client:only="react"/>
     </div>
 	</main>
 </Layout>
