@@ -3,9 +3,7 @@ import React from "react";
 
 export default function Newsletter({ setNewsletter }: { setNewsletter: any }) {
   // get the theme color from meta tag
-  const themeColor = document
-    .querySelector("meta[name=theme-color]")
-    ?.getAttribute("content") as string;
+  const themeColor = "#B66F13";
 
   return (
     <div
