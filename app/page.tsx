@@ -1,9 +1,9 @@
-export const dynamic = "auto",
-  dynamicParams = true,
-  revalidate = 0,
-  fetchCache = "only-no-store",
-  runtime = "nodejs",
-  preferredRegion = "auto";
+// export const dynamic = "auto",
+//   dynamicParams = true,
+//   revalidate = 0,
+//   fetchCache = "only-no-store",
+//   runtime = "nodejs",
+//   preferredRegion = "auto";
 
 import grabImages from "./(api)";
 import Canvas from "./(ui)/canvas";
@@ -14,7 +14,7 @@ export default async function Home() {
 
   return (
     <div className="flex h-full w-full flex-col items-center pt-3 md:justify-center">
-      <Canvas />
+      <Canvas images={images} />
       <Links />
     </div>
   );
