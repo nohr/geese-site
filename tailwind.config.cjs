@@ -2,10 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./ui/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       backgroundImage: {
@@ -18,8 +15,8 @@ module.exports = {
         'lg': '0 10px 10px rgba(0, 0, 0, 1)',
         'xl': '0 35px 35px rgba(0, 0, 0, 0.25)',
         '2xl': [
-            '0 35px 35px rgba(0, 0, 0, 0.75)',
-            '0 45px 45px rgba(0, 0, 0, 0.35)'
+          '0 35px 35px rgba(0, 0, 0, 0.75)',
+          '0 45px 45px rgba(0, 0, 0, 0.35)'
         ]
       },
       animation: {

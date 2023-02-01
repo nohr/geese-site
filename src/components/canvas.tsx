@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { colorTheme } from "../utils";
-import Frame from "../../public/frame_shadow_comp.png";
-var poissonProcess = require("poisson-process");
+// import { colorTheme } from "./utils";
+import Frame from "../assets/frame_shadow_comp.png"
+import poissonProcess from "poisson-process"
 
 export default function Canvas({ images }: { images: string[] }) {
   const [currentImage, setCurrentImage] = useState<string>("");
@@ -16,7 +15,7 @@ export default function Canvas({ images }: { images: string[] }) {
         // console.log(getRandomInt(2023010100, strftime('%Y%m%d%H', new Date())));
         if (images[r]) {
           setCurrentImage(images[r]);
-          colorTheme(images[r]);
+          // colorTheme(images[r]);
         }
       });
 
@@ -25,19 +24,16 @@ export default function Canvas({ images }: { images: string[] }) {
   }, [images]);
 
   return (
-    <div style={{ width: "100%", height: "auto" }}>
-      <Image
-        className="absolute -top-[40px] -left-[50px] h-[350px] w-[360px] "
+    <div className="inline relative w-[360px] h-[350px]">
+      <img
+        className="absolute w-[360px] h-[350px] z-50"
         src={Frame}
         alt="frame border"
-        width={360}
-        height={350}
-        priority
       />
       {currentImage ? (
-        <Image
-          className="gallery_image"
-          style={{ width: "100%", height: "auto" }}
+        <img
+          className="gallery_image z-10"
+          style={{ width: "100%", height: "auto", transform:"scale(0.7)" }}
           src={currentImage}
           alt="gallery image"
           width={360}
