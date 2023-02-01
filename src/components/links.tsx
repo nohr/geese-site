@@ -18,7 +18,7 @@ function Anchor({ className, link }: any) {
   );
 }
 
-export default function Links({ tag }: { tag: string }) {
+export default function Links() {
   const [newsletter, setNewsletter] = useState<boolean>(false);
   const className =
     "md:hover:animate-pulse active:animate-pulse text-center w-fit cursor-pointer select-none	link";
