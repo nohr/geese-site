@@ -1,0 +1,17 @@
+import Vibrant from "node-vibrant"
+
+//  Get color from image to change theme
+export function colorTheme(photo: string) {
+    //  Get color from image to change theme
+    Vibrant.from(photo)
+        .getPalette()
+        .then((palette: any) => {
+            // change the meta theme color
+            const meta = document.querySelector("meta[name=theme-color]");
+            if (meta) {
+                meta.setAttribute("content", palette.Vibrant.hex);
+            }
+        }
+        )
+        .catch((err: any) => console.log(err));
+}

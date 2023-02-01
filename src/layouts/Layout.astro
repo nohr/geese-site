@@ -1,0 +1,60 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+      <meta name="theme-color" content="#F4EADF" />
+      <meta name="description" content="3D Country" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Geese</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+html, 
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fffaea;
+}
+
+@font-face {
+  font-family: 'Caslon';
+  src: url('/Caslon Ionic-Regular Italic.otf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'geeseband';
+  src: url('/geeseband.otf');
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.title{
+  font-family: Caslon;
+}
+
+.link{
+  font-family: geeseband;
+  font-size: 17px;
+  line-height: 19px;
+}
+</style>
