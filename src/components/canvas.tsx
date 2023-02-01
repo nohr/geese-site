@@ -37,7 +37,7 @@ export default function Canvas({ images }: { images: string[] }) {
           width={360}
           height={350}
         />
-      ) : null}
+      ) : <div className="block w-[360px] h-[350px]">.</div> }
     </div>
   );
 }
