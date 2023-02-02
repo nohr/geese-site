@@ -4,6 +4,7 @@
 import * as functions from "firebase-functions";
 import {Configuration, OpenAIApi} from "openai";
 import * as admin from "firebase-admin";
+import {Request, Response} from "firebase-functions";
 
 // Init Firebase Admin
 admin.initializeApp();
@@ -49,5 +50,13 @@ export const generateImage = functions.pubsub
       return null;
     });
 
-// TODO: add a function that deletes oldest images from the seen folder
-// when it exceeds 1gb
+// a function that returns an array of all the files in the unseen
+// and seen folders in the storage bucket
+export const getFiles = functions.https
+    .onRequest(async (req:Request, res:Response) => {
+      const [unseenFiles] = await bucket.getFiles({prefix: "unseen/"});
+      const [seenFiles] = await bucket.getFiles({prefix: "seen/"});
+      const unseenNames = unseenFiles.map((file) => file.publicUrl());
+      const seenNames = seenFiles.map((file) => file.publicUrl());
+      res.send(unseenNames.concat(seenNames));
+    });

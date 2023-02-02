@@ -1,20 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Canvas from "../components/canvas"
-import Links from 'src/components/links';
-import grabImages from "api";
-	
-	const images = await grabImages();
-
-	// console.log(import.meta.env.PUBLIC_FIREBASE_STORAGE_BUCKET);
-	// const images:string[] = [];
+export const prerender = true;
+import Layout from 'layout';
+import Canvas from "components/canvas.astro";
+import Links from 'components/links.astro';
+import Newsletter from 'components/newsletter.astro';
 ---
 
 <Layout>
 	<main>
     <div class="flex h-full w-full flex-col items-center pt-3 md:justify-center">
-      <Canvas images={images} client:only="react" />
-      <Links client:only="react"/>
+      <Canvas />
+      <Links />
+	  <Newsletter/>
     </div>
 	</main>
 </Layout>
@@ -27,3 +24,5 @@ import grabImages from "api";
 		height: 100%;
 	}
 </style>
+<script>
+</script>
