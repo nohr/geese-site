@@ -1,0 +1,121 @@
+html {
+  margin:0;
+}
+body {
+  margin: 0 !important; 
+  height: 100vh;
+  width: 100vw;
+  background-color: #fffaea;
+}
+
+@font-face {
+  font-family: 'geeseband';
+  src: url('./assets/geeseband.otf');
+}
+
+@font-face {
+  font-family: 'geeseband';
+  src: url('./assets/Caslon Ionic-Regular Italic.otf');
+  font-style: italic;
+}
+
+.main_div {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.spacer {
+  margin-bottom: auto;
+  visibility: hidden;
+}
+
+.gallery {
+  /*margin:auto;*/
+  display:inline;
+  position: relative;
+}
+
+.gallery_image {
+  margin-top:0px;
+}
+
+.gallery_frame {
+  position: absolute;
+  height:350px;
+  width:360px;
+  top:-40px;
+  left:-50px;
+}
+
+.nav_div {
+  /*background: url('./assets/dc-distressed-bg-1.jpg');
+  back*/ground-size: cover;
+  margin-top: 60px;
+}
+
+.tag_div {
+  background: url('./assets/tag.svg');
+  background-position: top 9px left 0px;
+  background-size: 156px auto;
+  background-repeat: no-repeat;
+  width: 156px !important;
+  height: 182px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 0 18px 0;
+}
+
+.title_div {
+  font-style: italic;
+  font-size: 34px;
+}
+
+.tag_div svg {
+  padding: 4px 0 8px 0;
+  
+}
+
+.social_div {
+  margin-top: auto;
+  padding-top: 25px;
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+}
+
+a {
+  font-family: geeseband;
+  font-size: 17px;
+  line-height: 19px;
+}
+
+.link {
+  text-decoration: none;
+  color:black;
+}
+
+.social_icons {
+  width: auto;
+  height: 25px;
+}
+
+@keyframes flash {
+  0%   {color: black;}
+  50%  {color: darkgrey;}
+  100% {color: black;}
+}
+
+.link:hover {
+  animation-name: flash;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
