@@ -3,25 +3,16 @@ import Layout from 'layout';
 import Canvas from "components/canvas.astro";
 import Links from 'components/links.astro';
 import Newsletter from 'components/newsletter.astro';
+import Icons from 'components/icons.astro';
 ---
 
 <Layout>
-	<main>
+	<main class="flex flex-col m-auto p-6 max-w-prose h-full">
     <div class="flex h-full w-full flex-col items-center pt-3 md:justify-center">
       <Canvas />
       <Links />
 	  <Newsletter/>
     </div>
+	<Icons/>
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-		height: 100%;
-	}
-</style>
-<script>
-</script>

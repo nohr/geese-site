@@ -1,60 +1,95 @@
 ---
+import GoogleAnalytics from "components/Analytics.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-      <meta name="theme-color" content="#F4EADF" />
-      <meta name="description" content="3D Country" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Geese</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/metadata/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/metadata/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/metadata/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/images/metadata/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#F4EADF" />
+    <meta name="description" content="Geese" />
+    <meta name="generator" content={Astro.generator} />
+
+    <GoogleAnalytics />
+    <title>Geese</title>
+  </head>
+  <body>
+    <slot />
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N2LKN6X"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    <style is:global>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        height: 100vh;
+        width: 100vw;
+        background-color: #fffaea;
+      }
+
+      @font-face {
+        font-family: "Caslon";
+        src: url("/fonts/Caslon Ionic-Regular Italic.otf");
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "geeseband";
+        src: url("/fonts/geeseband.otf");
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .title {
+        font-family: Caslon;
+      }
+
+      .link {
+        font-family: geeseband;
+        font-size: 17px;
+        line-height: 19px;
+      }
+    </style>
+  </body>
 </html>
-<style is:global>
-html, 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  height: 100vh;
-  width: 100vw;
-  background-color: #fffaea;
-}
-
-@font-face {
-  font-family: 'Caslon';
-  src: url('/Caslon Ionic-Regular Italic.otf');
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'geeseband';
-  src: url('/geeseband.otf');
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.title{
-  font-family: Caslon;
-}
-
-.link{
-  font-family: geeseband;
-  font-size: 17px;
-  line-height: 19px;
-}
-</style>
