@@ -31,7 +31,7 @@ import GoogleAnalytics from "components/Analytics.astro";
       color="#5bbad5"
     />
     <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#F4EADF" />
+    <meta name="theme-color" content="#fffaea" />
     <meta name="description" content="Geese" />
     <meta name="generator" content={Astro.generator} />
 
@@ -40,46 +40,48 @@ import GoogleAnalytics from "components/Analytics.astro";
   </head>
   <body>
     <slot />
-  </body><style is:global>
-    html,
-    body {
-      padding: 0;
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      height: 100vh;
-      width: 100vw;
-      background-color: #fffaea;
-    }
+    <style is:global>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        height: 100dvh;
+        /* height: 100vh; */
+        width: 100vw;
+        background-color: #fffaea;
+      }
 
-    @font-face {
-      font-family: "Caslon";
-      src: url("/fonts/Caslon Ionic-Regular Italic.otf");
-      font-style: italic;
-    }
+      @font-face {
+        font-family: "Caslon";
+        src: url("/fonts/Caslon Ionic-Regular Italic.otf");
+        font-style: italic;
+      }
 
-    @font-face {
-      font-family: "geeseband";
-      src: url("/fonts/geeseband.otf");
-    }
+      @font-face {
+        font-family: "geeseband";
+        src: url("/fonts/geeseband.otf");
+      }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-    * {
-      box-sizing: border-box;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    .title {
-      font-family: Caslon;
-    }
+      .title {
+        font-family: Caslon;
+      }
 
-    .link {
-      font-family: geeseband;
-      font-size: 17px;
-      line-height: 19px;
-    }
-  </style>
+      .link {
+        font-family: geeseband;
+        font-size: 17px;
+        line-height: 19px;
+      }
+    </style>
+  </body>
 </html>
