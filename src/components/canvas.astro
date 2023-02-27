@@ -1,41 +1,45 @@
 ---
-const res = await fetch("https://us-central1-geese-site.cloudfunctions.net/getFiles",
-	{
-		method: "GET",
-		headers: {
-			"Content-Type": "application/json",
-			"cache-control": "max-age=31536000",
-		},
-		credentials: "same-origin",
-	});
-const images =  await res.json();
+const res = await fetch(
+  "https://us-central1-geese-site.cloudfunctions.net/getFiles",
+  {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "cache-control": "max-age=31536000",
+    },
+    credentials: "same-origin",
+  }
+);
+const images = await res.json();
 const r = Math.floor(Math.random() * images.length);
 ---
+
 <image-gallery data-images={images} class="inline relative w-[360px] h-[350px]">
-    <img
-      class="absolute w-[360px] h-[350px] z-50"
-      src="/images/UI/frame_shadow_comp.png"
-      alt="frame border"
-    />
-      <img
-        class="gallery_image z-10"
-        style={{ width: "100%", height: "auto", transform:"scale(0.7)" }}
-        src={images[r]}
-        alt="gallery image"
-        
-        width={360}
-        height={350}
-      />
-  </image-gallery>
-  <script>
-import poissonProcess from "poisson-process";
+  <img
+    class="absolute z-50 h-[350px] w-[360px]"
+    src="/images/UI/frame_shadow_comp.png"
+    alt="frame border"
+  />
+  <img
+    class="gallery_image z-10"
+    style={{ width: "100%", height: "auto", transform: "scale(0.7)" }}
+    src={images[r]}
+    alt="gallery image"
+    width={360}
+    height={350}
+  />
+</image-gallery>
+<script>
+  import poissonProcess from "poisson-process";
 
   class Gallery extends HTMLElement {
     constructor() {
       super();
 
-      const images = this.dataset.images?.split(',') as string[];
-      const current = document.querySelector(".gallery_image") as HTMLImageElement;
+      const images = this.dataset.images?.split(",") as string[];
+      const current = document.querySelector(
+        ".gallery_image"
+      ) as HTMLImageElement;
 
       const p = poissonProcess.create(5000, function updateImage() {
         var r = Math.floor(Math.random() * images.length);
@@ -45,10 +49,8 @@ import poissonProcess from "poisson-process";
       });
 
       p.start();
-
     }
   }
 
-  customElements.define('image-gallery', Gallery);
-
-  </script>
+  customElements.define("image-gallery", Gallery);
+</script>
