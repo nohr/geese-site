@@ -1,13 +1,13 @@
 # geeseband.com
 
- New website for album release!
+New website for album release!
 
 ---
 
-## Vercel deployment
+## Firebase deployment
 
-[geese-site.vercel.app](https://geese-site.vercel.app/)
+[geese-site.web.app](https://geese-site.web.app/)
 
 ## Credit
 
-This repo contains code and assets from  [andrew-rinato/geeseband](https://github.com/andrew-rinato/geeseband)
+This repo contains code and assets from [andrew-rinato/geeseband](https://github.com/andrew-rinato/geeseband)
