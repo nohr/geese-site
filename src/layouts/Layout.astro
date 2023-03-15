@@ -82,6 +82,24 @@ import GoogleAnalytics from "components/Analytics.astro";
         font-size: 17px;
         line-height: 19px;
       }
+
+      #presave {
+        position: relative;
+      }
+      #presave:before {
+        content: attr(id);
+        position: absolute;
+        background: url("/images/UI/presave.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0.5rem 1.5rem 0.7rem;
+        color: white;
+        top: -120%;
+        font-size: 0.75rem;
+        left: -70%;
+        rotate: -15deg;
+      }
       .social_div {
         margin-top: auto;
         /* padding-top: 25px; */
