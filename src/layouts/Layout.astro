@@ -4,6 +4,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=GTM-N2LKN6X"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GTM-N2LKN6X");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -35,22 +48,6 @@
     <meta name="generator" content={Astro.generator} />
     <title>Geese</title>
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    type="text/partytown"
-    async
-    defer
-    fetchpriority="low"
-    src="https://www.googletagmanager.com/gtag/js?id=GTM-N2LKN6X"
-  ></script>
-  <script type="text/partytown">
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "GTM-N2LKN6X");
-  </script>
   <body>
     <slot />
     <style is:global>
