@@ -1,8 +1,8 @@
 ---
 const linkArray = [
   {
-    title: "3D Country",
-    href: "https://geese.lnk.to/3DCsingle",
+    title: "3D Country\nout 6/23",
+    href: "https://geese.lnk.to/3dcountry",
     id: "presave",
   },
   { title: "watch", href: "https://www.youtube.com/@Geeseband" },
@@ -14,7 +14,7 @@ const className =
 ---
 
 <div
-  class={`flex flex-col justify-center h-[213px] p-[13px_0_18px_0] items-center bg-[url("/images/UI/tag.svg")] w-[156px] [svg]:p-[4px_0_8px_0]`}
+  class={`flex flex-col relative justify-center h-[213px] p-[13px_0_18px_0] items-center bg-[url("/images/UI/tag.svg")] w-[156px] [svg]:p-[4px_0_8px_0]`}
   style={{
     backgroundPosition: "top 9px left 0px",
     backgroundRepeat: "no-repeat",
@@ -22,7 +22,7 @@ const className =
   }}
 >
   <!-- Header -->
-  <div class="title flex text-3xl italic">GEESE</div>
+  <div class="title flex text-2xl italic">GEESE</div>
   <!-- Twiddle -->
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +30,7 @@ const className =
     height="16"
     fill="none"
     viewBox="0 0 103 16"
+    style={{ position: "absolute", top: "25%" }}
   >
     <path
       stroke="#000"
