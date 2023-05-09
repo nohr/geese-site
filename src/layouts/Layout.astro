@@ -47,7 +47,9 @@ import Icons from "components/icons.astro";
     <title>Geese</title>
   </head>
   <body>
-    <main class="m-auto flex h-full max-w-prose flex-col p-6">
+    <main
+      class="m-auto flex h-full max-w-prose flex-col justify-between p-6 md:justify-end"
+    >
       <slot />
       <Icons />
     </main>
@@ -113,8 +115,10 @@ import Icons from "components/icons.astro";
         rotate: -15deg;
       }
       .social_div {
-        margin-top: auto;
-        /* padding-top: 25px; */
+        /* margin-top: auto; */
+        /* padding-top: 100%; */
+        position: absolute;
+        bottom: 20px;
         width: 350px;
         display: flex;
         flex-direction: row;
