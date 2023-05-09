@@ -1,14 +1,12 @@
 ---
+import Icons from "components/icons.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=GTM-N2LKN6X"
-    ></script>
+    <script type="text/partytown" async defer src="/scripts/gtag.js"></script>
     <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -49,7 +47,10 @@
     <title>Geese</title>
   </head>
   <body>
-    <slot />
+    <main class="m-auto flex h-full max-w-prose flex-col justify-center p-6">
+      <slot />
+      <Icons />
+    </main>
     <style is:global>
       html,
       body {
@@ -112,8 +113,10 @@
         rotate: -15deg;
       }
       .social_div {
-        margin-top: auto;
-        /* padding-top: 25px; */
+        /* margin-top: auto; */
+        /* padding-top: 100%; */
+        position: absolute;
+        bottom: 20px;
         width: 350px;
         display: flex;
         flex-direction: row;
