@@ -8,7 +8,7 @@ import partytown from "@astrojs/partytown";
 export default defineConfig({
   integrations: [
     partytown({
-      config: { debug: false, forward: ["dataLayer.push"] },
+      config: { debug: true, forward: ["dataLayer.push"] },
     }),
     react(),
     tailwind(),
