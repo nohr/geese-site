@@ -11,4 +11,9 @@ import Newsletter from "components/newsletter.astro";
     <Links />
     <Newsletter />
   </div>
+  <p id="agent" class=""></p>
 </Layout>
+<script>
+  const agent = document.getElementById("agent");
+  if (agent) agent.innerHTML = navigator.userAgent;
+</script>
