@@ -85,5 +85,5 @@ class={`modal absolute hidden h-min w-4/5 flex-col gap-y-5 rounded-lg p-4 pt-8 m
     const close = document.querySelector(".close") as HTMLDivElement;
     const closeModal = () => 
         modal.style.display = "none";
-    close.addEventListener("click", closeModal);
+    close?.addEventListener("click", closeModal);
 </script>
