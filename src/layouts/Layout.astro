@@ -1,6 +1,4 @@
 ---
-import { join } from "node:path";
-import { AstroFont } from "astro-font";
 import Icons from "components/icons.astro";
 ---
 
@@ -47,38 +45,6 @@ import Icons from "components/icons.astro";
     <meta name="description" content="Geese" />
     <meta name="generator" content={Astro.generator} />
     <title>Geese</title>
-    <AstroFont
-      config={[
-        {
-          src: [
-            {
-              weight: '400',
-              style: 'italic',
-              path: join(process.cwd(), 'public', 'fonts', 'Caslon Ionic-Regular Italic.otf')
-            },
-          ],
-          preload: false,
-          name: "Caslon",
-          display: "swap",
-          fallback: "sans-serif",
-          cssVariable: "font-caslon",
-        },
-        {
-          src: [
-            {
-              weight: '400',
-              style: 'normal',
-              path: join(process.cwd(), 'public', 'fonts', 'geeseband.otf')
-            },
-          ],
-          preload: false,
-          display: "swap",
-          name: "geeseband",
-          fallback: "sans-serif",
-          cssVariable: "font-geeseband",
-        },
-      ]}
-    />
   </head>
   <body>
     <main class="m-auto flex h-full max-w-prose flex-col justify-center p-6">
@@ -98,6 +64,17 @@ import Icons from "components/icons.astro";
         background-color: #fffaea;
       }
 
+      @font-face {
+        font-family: "Caslon";
+        src: url("/fonts/Caslon Ionic-Regular Italic.otf");
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: "geeseband";
+        src: url("/fonts/geeseband.otf");
+      }
+
       a {
         color: inherit;
         text-decoration: none;
@@ -108,11 +85,11 @@ import Icons from "components/icons.astro";
       }
 
       .title {
-        font-family: var(--font-caslon);
+        font-family: Caslon;
       }
 
       .link {
-        font-family: var(--font-geeseband);
+        font-family: geeseband;
         font-size: 17px;
         line-height: 19px;
       }
