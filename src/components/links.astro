@@ -1,29 +1,14 @@
 ---
-const linkArray = [
-  {
-    title: "4D Country",
-    href: "https://geese.lnk.to/4DCountry",
-    id: "presave",
-    target: "_blank",
-  },
-  {
-    title: "watch",
-    href: "https://www.youtube.com/@Geeseband",
-    target: "_blank",
-  },
-  { title: "shows", href: "/shows", target: "_self" },
-  { title: "store", href: "https://www.hellomerch.com/collections/geese", target: "_blank" },
-];
 const className =
   "md:hover:animate-pulse active:animate-pulse text-center w-fit cursor-pointer select-none link";
 ---
 
 <div
-  class={`flex flex-col relative justify-center h-[213px] p-[13px_0_18px_0] items-center bg-[url("/images/UI/tag.svg")] w-[156px] [svg]:p-[4px_0_8px_0]`}
+  class={`flex flex-col relative justify-center h-[283px] p-[30px_0_24px_0] items-center bg-[url("/images/UI/tag.svg")] w-[225px] [svg]:p-[4px_0_8px_0]`}
   style={{
     backgroundPosition: "top 9px left 0px",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "156px auto",
+    backgroundSize: "225px 269px",
   }}
 >
   <!-- Header -->
@@ -41,15 +26,49 @@ const className =
       d="M2.668 15c-1-1.5-2.3-4.7.5-5.5 3.5-1 6.5 1.5 6 2.5s-9.5-1-8-6c1.2-4 9.834-2.333 14-1 3.5 2 9.7 6.2 6.5 7-4 1-3.97-7.652-2-8 8.5-1.5 14.5 7.5 21.5 7s9-7 6.5-7 0 5.5 2 5.5c2.5 0 5.5-8.5 2-8.5s-.575 8.5 1.925 8.5c.718 0 1.5-.708 2.092-1.617M100.593 15c.881-1.321 1.995-3.961.334-5.119m0 0a2.784 2.784 0 00-.834-.381c-3.5-1-6.5 1.5-6 2.5.34.68 4.606-.027 6.834-2.119zm0 0c1.05-.986 1.647-2.28 1.166-3.881-1.2-4-9.833-2.333-14-1a48.841 48.841 0 00-3.21 2.006m0 0c-2.966 2.026-5.62 4.412-3.29 4.994 2.48.62 3.411-2.472 3.29-4.994zm0 0c-.073-1.544-.542-2.874-1.29-3.006-8.5-1.5-14.5 7.5-21.5 7-3.105-.222-5.227-1.624-6.408-3.117m0 0C54.205 6.013 54.202 4 55.593 4c1.603 0 1.15 2.26.092 3.883z"
     ></path>
   </svg>
+
   <!-- Links -->
-  {
-    linkArray.map(({ title, href, id, target }) => (
-      <a href={href} id={id} class={className} rel="noreferrer" target={target}>
-        {title}
+  <div class="flex flex-col items-center gap-2 py-2">
+    <a
+      href="https://geese.lnk.to/4DCountry"
+      id="presave"
+      class={className}
+      rel="noreferrer"
+      target="_blank"
+    >
+      4D Country
+    </a>
+    <a
+      href="https://www.youtube.com/@Geeseband"
+      class={className}
+      rel="noreferrer"
+      target="_blank"
+    >
+      watch
+    </a>
+    <a href="/shows" class={className} rel="noreferrer" target="_self">
+      shows</a
+    >
+    <div class="grid grid-cols-2 items-center px-8">
+      <a
+        href="https://geese.terrible.group/"
+        class={className}
+        rel="noreferrer"
+        target="_blank"
+      >
+        uk & eu store
       </a>
-    ))
-  }
-  <div class={className + " newsletterBtn"}>newsletter</div>
+      <a
+        href="https://www.hellomerch.com/collections/geese"
+        class={className}
+        rel="noreferrer"
+        target="_blank"
+      >
+        row store
+      </a>
+    </div>
+    <div class={className + " newsletterBtn"}>newsletter</div>
+  </div>
 </div>
 <script>
   // open the newsletter modal on click
