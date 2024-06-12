@@ -10,8 +10,8 @@ const res = await fetch(
     credentials: "same-origin",
   }
 );
-const images = await res.json();
-// const images = [""]
+let images = [];
+if (res.ok) images = await res.json();
 const r = Math.floor(Math.random() * images.length);
 ---
 

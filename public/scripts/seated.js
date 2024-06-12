@@ -56,25 +56,7 @@
     (globalThis[Symbol.for("GLIMMER_VALIDATOR_REGISTRATION")] = !1),
       (window.define = void 0);
     var n = document.currentScript;
-    n.type = "text/partytown";
-    function r(e) {
-      if (e) {
-        var t = "seated-55fdf2c0-script-" + e.dataset.artistId,
-          n = document.createElement("script");
-        (n.id = t),
-          (n.dataset.artistId = e.dataset.artistId),
-          (n.onload = function () {}),
-          "development" === e.dataset.devEnv
-            ? (n.src = "/scripts/widget.js")
-            : "staging" === e.dataset.devEnv
-            ? (n.src = e.dataset.widgetHost + "/widget.js")
-            : (n.src = "/scripts/widget.js"),
-          e.parentNode.insertBefore(n, e);
-      }
-    }
-    function o() {
-      let e =
-        arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+    function r(e = null) {
       null === e &&
         (e =
           n.previousElementSibling &&
@@ -84,13 +66,30 @@
         e &&
           0 === e.children.length &&
           "true" !== e.dataset.startLoad &&
-          ((e.dataset.startLoad = "true"), r(e));
+          ((e.dataset.startLoad = "true"),
+          (function (e) {
+            if (e) {
+              var t = "seated-55fdf2c0-script-" + e.dataset.artistId,
+                n = document.createElement("script");
+              (n.id = t),
+                (n.dataset.artistId = e.dataset.artistId),
+                (n.onload = function () {}),
+                "true" === e.dataset.envIsE2e
+                  ? (n.src = e.dataset.widgetHost + "/widget.js")
+                  : "development" === e.dataset.devEnv
+                  ? (n.src = "https://canal.localhost/widget.js")
+                  : "staging" === e.dataset.devEnv
+                  ? (n.src = e.dataset.widgetHost + "/widget.js")
+                  : (n.src = "https://widget.seated.com/widget.js"),
+                e.parentNode.insertBefore(n, e);
+            }
+          })(e));
     }
-    o(),
+    r(),
       (window.onload = function () {
         var e;
-        o(),
-          (e = o),
+        r(),
+          (e = r),
           new (window.MutationObserver || window.WebKitMutationObserver)(
             function (t) {
               for (var n = 0; n < t.length; n++) {
